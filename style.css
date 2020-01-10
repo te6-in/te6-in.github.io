@@ -1,3 +1,47 @@
-p {
+body {
+    background-color: #FFF;
+}
+
+* {
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    text-align: center;
+}
+
+.title {
+    font-size: 2em;
     color: dodgerblue;
+}
+
+.btn {
+    color: white;
+    width: 10em;
+    font-size: 1em;
+    background-color: skyblue;
+    border: none;
+    text-decoration: none;
+    padding: 1.3em 2em 1em 2em;
+    margin: 1em 0.5em;
+    border-radius: 5em;
+    box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.1);
+    transition: box-shadow .5s, background-color .5s;
+    transition-timing-function: ease;
+    display: inline-block;
+}
+
+i.material-icons {
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 0.15em;
+}
+
+a {
+}
+
+.btn:hover {
+    background-color: deepskyblue;
+    box-shadow: 0 .7em 2em rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    background-color: deepskyblue;
 }
