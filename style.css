@@ -15,8 +15,8 @@ body {
 }
 
 div.btns {
-    display: block;
-    margin: 2em 5em;
+    display: inline-block;
+    max-width: 32em;
 }
 
 .btn {
