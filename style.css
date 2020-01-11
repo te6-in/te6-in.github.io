@@ -2,9 +2,13 @@
 
 }
 
+:root {
+    --neutral-black: #465053;
+    --bg-white: #F3F6F6;
+}
+
 body {
-    background-color: #F3F6F6;
-    
+    background-color: var(--bg-white);
 }
 
 div.header {
@@ -27,7 +31,7 @@ div.header {
 
 .header .title {
     font-size: 2em;
-    color: #465053;
+    color: var(--neutral-black);
     font-weight: 700;
 }
 
@@ -40,47 +44,76 @@ div.header {
     left: 0;
 }
 
-.contents {
+.master .contents {
     font-family: 'Nunito', 'Noto Sans KR', sans-serif;
     display: flex;
+    width: 100vw;
     flex-direction: column;
-    padding-left: 5em;
-    padding-right: 5em;
     justify-content: center;
     align-items: flex-start;
+    padding-left: 5em;
+    padding-right: 5em;
 }
 
 .contents .title {
     font-size: 2.4em;
-    font-weight: 700;
+    font-weight: 400;
     top: 8em;
-    color: #465053;
+    color: var(--neutral-black);
+    margin-bottom: 0.5em
 }
 
-div.btns {
-    display: none;
-    /* display: block; */
-    max-width: 32em;
-    height: 14em;
-    margin: auto;
-    padding: 14em 0;
+.contents .description {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--neutral-black);
 }
 
-a.btn {
-    color: white;
-    width: 10em;
-    font-size: 1em;
-    background-color: skyblue;
-    border: none;
+.cards {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    top: 80vh;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: 0.5em 0.5em 3em 0.5em;
+}
+
+.card .cardbg {
+    display: flex;
+    width: 64vw;
+    max-width: 36em;
+    height: 36vw;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0.4em 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.5s;
+}
+
+#cardhover:hover .cardbg {
+    box-shadow: 0 0.4em 20px rgba(0, 0, 0, 0.4);
+}
+
+.card .cardname {
+    color: var(--neutral-black);
+    font-size: 1.4em;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+
+.card .linkwithoutul {
     text-decoration: none;
-    padding: 1.3em 2em 1em 2em;
-    margin: 1em 0.5em;
-    border-radius: 5em;
-    box-shadow: 0 .5em 1em rgba(0, 0, 0, 0.1);
-    transition: box-shadow .5s, background-color .5s;
-    transition-timing-function: ease;
-    display: inline-block;
-    text-align: center;
 }
 
 i.material-icons {
