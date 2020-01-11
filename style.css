@@ -53,25 +53,27 @@ div.header {
     display: flex;
     width: 100vw;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content:flex-start;
+    align-items: center;
     padding-left: 5em;
     padding-right: 5em;
     opacity: 1;
 }
 
 .contents .title {
-    font-size: 2.4em;
+    font-size: 3.5em;
     font-weight: 400;
-    top: 8em;
+	padding-top: 30vh;
     color: var(--neutral-black);
-    margin-bottom: 0.5em
+    margin-bottom: 1em;
+	text-align: center;
 }
 
 .contents .description {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 400;
     color: var(--subtext-grey);
+	text-align: center;
 }
 
 .cards {
@@ -113,7 +115,7 @@ div.header {
 
 .card .cardname {
     color: var(--neutral-black);
-    font-size: 1.4em;
+    font-size: 1.5em;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
 }

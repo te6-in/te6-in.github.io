@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Better exprience from *delicate* consideration -->
-<!-- thumnail size = 768x432 -->
+<!-- ideal thumnail size = 768x432 -->
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
@@ -21,8 +21,14 @@
         </div>
         <div class="master">
             <div class="contents" id="fade">
-                <div class="title">Better experience<br>from <u><i>delicate</i></u> consideration</div>
-                <div class="description"><b>주찬휘</b><br>대한민국에서 UX 디자인을 공부하는 학생입니다.</div>
+				<div class="title">
+					Better experience<br>
+					— from <u id="randomColor"><i>delicate</i></u> consideration
+				</div>
+                <div class="description">
+					<b>주찬휘</b><br>
+					대한민국에서 UX 디자인을 공부하는 학생입니다.
+				</div>
             </div>
         </div>
         <div class="cards">
@@ -54,9 +60,15 @@
             </div>
         </div>
 		<script>
+			window.onload = function() {randomColor()};
 			window.onscroll = function() {fade()};
 			function fade() {
-				document.getElementById("fade").style.opacity = (1 - document.documentElement.scrollTop / 500)
+				document.getElementById("fade").style.opacity = (1 - document.documentElement.scrollTop / 500);
+			}
+			function randomColor() {
+				var randomH = Math.floor(Math.random() * 360);
+				var randomColor = "hsl(x,54%,54%)".replace('x', randomH);
+				document.getElementById("randomColor").style.color = randomColor;
 			}
 		</script>
     </body>
