@@ -93,8 +93,9 @@ div.header {
 .card .cardbg {
     display: flex;
     width: 64vw;
-    max-width: 36em;
+    max-width: 48em;
     height: 36vw;
+    max-height: 27em;
     margin-bottom: 1em;
     border-radius: 8px;
     box-shadow: 0 0.4em 8px rgba(0, 0, 0, 0.2);
