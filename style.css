@@ -11,6 +11,8 @@
 
 body {
     background-color: var(--bg-white);
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 div.header {
