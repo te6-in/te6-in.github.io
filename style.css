@@ -104,7 +104,7 @@ div.header {
     height: 36vw;
     max-height: 27em;
     margin-bottom: 1em;
-    border-radius: 8px;
+    border-radius: 14px;
     box-shadow: 0 0.4em 8px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.5s;
 }
@@ -118,6 +118,7 @@ div.header {
     font-size: 1.5em;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
+	text-align: center;
 }
 
 .card .linkwithoutul {
