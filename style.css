@@ -4,6 +4,14 @@ body {
 	overflow-y: auto;
 }
 
+:root {
+	--selection-bg: none;
+}
+
+::selection {
+	background: var(--selection-bg);
+}
+
 div.header {
     position: fixed;
     display: flex;
@@ -32,6 +40,7 @@ div.header {
 	z-index: 1;
     opacity: .5;
 }
+
 .header .title {
 	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
     font-size: 2em;
@@ -50,7 +59,6 @@ div.header {
 }
 
 .contents {
-    font-family: 'Nunito', 'Noto Sans KR', sans-serif;
     display: flex;
     width: 100vw;
     flex-direction: column;
@@ -62,19 +70,26 @@ div.header {
 }
 
 .contents .title {
+    font-family: 'Nunito', 'Noto Sans KR', sans-serif;
     font-size: 3.5em;
     font-weight: 400;
-	padding-top: 26vh;
+	padding-top: 25vh;
     color: var(--neutral);
     margin-bottom: 1em;
 	text-align: center;
 }
 
 .contents .description {
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.5em;
     font-weight: 400;
     color: var(--subtext);
 	text-align: center;
+}
+
+.contents .description .accent {
+	font-size: 1.2em;
+	font-weight: 500;
 }
 
 .cards {
