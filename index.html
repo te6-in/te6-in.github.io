@@ -5,8 +5,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>TE6.IN</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>🦈 te6.in</title>
+		<link rel="stylesheet" href="colors-light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+		<link rel="stylesheet" href="colors-dark.css" media="(prefers-color-scheme: dark)">
+        <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,400,700&display=swap&subset=korean" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,700i,800&display=swap" rel="stylesheet"> 
@@ -16,8 +18,9 @@
     <body>
         <div class="header">
             <div class="container">
-				<div class="title">TE6.IN</div>
+				<div class="title">te6.in</div>
             </div>
+			<div class="bg" id="fade2"></div>
         </div>
         <div class="master">
             <div class="contents" id="fade">
@@ -25,9 +28,9 @@
 					Better experience<br>
 					— from <u id="randomColor"><i>delicate</i></u> consideration
 				</div>
-                <div class="description">
+                <div class="description" id="dark">
 					<b>주찬휘</b><br>
-					대한민국에서 UX 디자인을 공부하는 학생입니다.
+					대한민국에서 UX 디자인을 공부하는 대학생입니다. 👨🏻‍💻
 				</div>
             </div>
         </div>
@@ -60,16 +63,75 @@
             </div>
         </div>
 		<script>
+			
+			
+			const media = window.matchMedia('(prefers-color-scheme: dark)');
+			
+			showDarkModeText();
+			media.addListener(() => { showDarkModeText(); });
+			
 			randomColor();
-			window.onscroll = function() {fade()};
+			
+			window.onscroll = function() {fade(), fade2()};
+
+			
 			function fade() {
 				document.getElementById("fade").style.opacity = (1 - document.documentElement.scrollTop / 500);
 			}
+			
+			
+			function fade2() {
+				var o = 0;
+				var finalo = 0.9;
+				if (document.documentElement.scrollTop <= 640) {
+					o = 0;
+				}
+				else if (document.documentElement.scrollTop > 640 && document.documentElement.scrollTop <= 840) {
+					o = (document.documentElement.scrollTop - 640) / 200 * finalo;
+				}
+				else if (document.documentElement.scrollTop > 840) {
+					o = finalo;
+				}
+				document.getElementById("fade2").style.opacity = o;
+			}
+			
+			
 			function randomColor() {
 				var randomH = Math.floor(Math.random() * 360);
 				var randomColor = "hsl(x,54%,54%)".replace('x', randomH);
 				document.getElementById("randomColor").style.color = randomColor;
 			}
+			
+			
+			function isDarkMode() {
+				return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+			}
+			
+			
+			function showDarkModeText() {
+				if (isDarkMode() == 1) {
+					addElement("dark", "small", "darktxt", "<br><br>다크 모드 🌙");
+					setTimeout(() => { removeElement("darktxt"); }, 1500);
+				}
+			}
+			
+			
+			function addElement(parentId, elementTag, elementId, html) {
+				// Adds an element to the document
+				var p = document.getElementById(parentId);
+				var newElement = document.createElement(elementTag);
+				newElement.setAttribute('id', elementId);
+				newElement.innerHTML = html;
+				p.appendChild(newElement);
+			}
+			
+			    function removeElement(elementId) {
+				// Removes an element from the document
+				var element = document.getElementById(elementId);
+				element.parentNode.removeChild(element);
+			}
+			
+			
 		</script>
     </body>
 </html>

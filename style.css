@@ -1,16 +1,5 @@
-* {
-
-}
-
-:root {
-    --neutral-black: #465053;
-	--subtext-grey: #8D9597;
-    --bg-white: #F3F6F6;
-	--bg-white-70: #F3F6F6b3;
-}
-
 body {
-    background-color: var(--bg-white);
+    background-color: var(--bg);
 	overflow-x: hidden;
 	overflow-y: auto;
 }
@@ -19,24 +8,36 @@ div.header {
     position: fixed;
     display: flex;
     width: 100vw;
-    height: 6em;
+    height: 6.4em;
     top: 0px;
     left: 0px;
-    background-color: var(--bg-white-70);
     z-index: 10;
     align-items: center;
+	justify-content: center;
 }
 
 .header .container {
-    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
-    padding-left: 5em;
-    align-items: center;
+	display:flex;
+	align-items: center;
+	justify-content: center;
 }
 
+.header .bg {
+	position: absolute;
+    top: 0px;
+	left: 0px;
+    width: 100%;
+    height: 100%;
+	background-color: var(--bg);
+	z-index: 1;
+    opacity: .5;
+}
 .header .title {
+	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
     font-size: 2em;
-    color: var(--neutral-black);
+    color: var(--subtext);
     font-weight: 700;
+	z-index: 1000;
 }
 
 .master {
@@ -63,8 +64,8 @@ div.header {
 .contents .title {
     font-size: 3.5em;
     font-weight: 400;
-	padding-top: 30vh;
-    color: var(--neutral-black);
+	padding-top: 26vh;
+    color: var(--neutral);
     margin-bottom: 1em;
 	text-align: center;
 }
@@ -72,7 +73,7 @@ div.header {
 .contents .description {
     font-size: 1.5em;
     font-weight: 400;
-    color: var(--subtext-grey);
+    color: var(--subtext);
 	text-align: center;
 }
 
@@ -109,12 +110,12 @@ div.header {
     transition: box-shadow 0.5s;
 }
 
-#cardhover:hover .cardbg {
-    box-shadow: 0 0.4em 20px rgba(0, 0, 0, 0.4);
+.card:hover .cardbg {
+    box-shadow: 0 0.6em 16px rgba(0, 0, 0, 0.4);
 }
 
 .card .cardname {
-    color: var(--neutral-black);
+    color: var(--neutral);
     font-size: 1.5em;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
@@ -125,20 +126,8 @@ div.header {
     text-decoration: none;
 }
 
-i.material-icons {
+.material-icons {
     display: inline-block;
     vertical-align: middle;
     padding-bottom: 0.15em;
-}
-
-a {
-}
-
-.btn:hover {
-    background-color: deepskyblue;
-    box-shadow: 0 .7em 2em rgba(0, 0, 0, 0.3);
-}
-
-.btn:active {
-    background-color: deepskyblue;
 }
