@@ -164,5 +164,9 @@ div.header {
 
 .copyright {
 	margin-bottom: 10em;
-	color: var(--subtext)
+	color: var(--subtext);
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 400;
+	text-align: center;
+	font-size: 1em;
 }
