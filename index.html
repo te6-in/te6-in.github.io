@@ -4,7 +4,7 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=0.5">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
         <title>🦈 te6.in</title>
 		<link rel="stylesheet" href="colors-light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
 		<link rel="stylesheet" href="colors-dark.css" media="(prefers-color-scheme: dark)">
@@ -18,24 +18,18 @@
     <body>
         <div class="header">
             <div class="container">
-				<div class="title">te6.in</div>
+				<span class="title">te6.in</span>
             </div>
-			<div class="bg" id="fade2"></div>
+			<div class="bg"></div>
         </div>
-        <div class="master">
+        <div class="bg">
             <div class="contents" id="fade">
-				<div class="title">
-					Better experience<br>
-					— from <u id="randomColor"><i>delicate</i></u> consideration
-				</div>
-                <div class="description" id="dark">
-					<a class="accent">주찬휘</a><br>
-					대한민국에서 UX 디자인을 공부하는 대학생입니다. 👨🏻‍💻
-				</div>
+				<div class="title">Better experience<br>— from <strong class="accent" id="randomColor">delicate</strong> consideration</div>
+                <div class="description" id="dark"><span class="accent">주찬휘</span><br>대한민국에서 UX 디자인을 공부하는 대학생입니다. 👨🏻‍💻</div>
             </div>
         </div>
-        <div class="cards">
-            <div class="container">
+        <div class="float">
+            <div class="cards">
                 <div class="card" id="cardhover">
                     <a class="linkwithoutul" href="http://naver.com/">
                         <img class="cardbg" src="images/projectthumbnails/kakaomap_redesign.png">
@@ -61,38 +55,18 @@
                     </a>
                 </div>
             </div>
+			<div class="footer">
+				<span class="copyright">Copyright © 2020 주찬휘. 모든 권리 보유.</span>
+			</div>
         </div>
 		<script>
 			
 			
 			const media = window.matchMedia('(prefers-color-scheme: dark)');
 			
-			showDarkModeText();
-			media.addListener(() => { showDarkModeText(); });
-			
-			randomColor();
-			
-			window.onscroll = function() {fade(), fade2()};
-
 			
 			function fade() {
 				document.getElementById("fade").style.opacity = (1 - document.documentElement.scrollTop / 500);
-			}
-			
-			
-			function fade2() {
-				var o = 0;
-				var finalo = 0.9;
-				if (document.documentElement.scrollTop <= 640) {
-					o = 0;
-				}
-				else if (document.documentElement.scrollTop > 640 && document.documentElement.scrollTop <= 840) {
-					o = (document.documentElement.scrollTop - 640) / 200 * finalo;
-				}
-				else if (document.documentElement.scrollTop > 840) {
-					o = finalo;
-				}
-				document.getElementById("fade2").style.opacity = o;
 			}
 			
 			
@@ -132,6 +106,18 @@
 				var element = document.getElementById(elementId);
 				element.parentNode.removeChild(element);
 			}
+			
+			
+			showDarkModeText();
+			media.addListener(() => { showDarkModeText(); });
+			
+			randomColor();
+			
+			window.onunload = function () {
+  				window.scrollTo(0, 0);
+			}
+			
+			window.onscroll = function () { fade() };
 			
 			
 		</script>

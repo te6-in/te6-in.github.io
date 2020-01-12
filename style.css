@@ -12,11 +12,18 @@ body {
 	background: var(--selection-bg);
 }
 
+
+.material-icons {
+    display: inline-block;
+    vertical-align: middle;
+    padding-bottom: 0.15em;
+}
+
 div.header {
     position: fixed;
     display: flex;
     width: 100vw;
-    height: 6.4em;
+    height: 5em;
     top: 0px;
     left: 0px;
     z-index: 10;
@@ -38,7 +45,7 @@ div.header {
     height: 100%;
 	background-color: var(--bg);
 	z-index: 1;
-    opacity: .5;
+    opacity: .85;
 }
 
 .header .title {
@@ -49,7 +56,7 @@ div.header {
 	z-index: 1000;
 }
 
-.master {
+.bg {
     position: fixed;
     display: flex;
     width: 100vw;
@@ -66,7 +73,7 @@ div.header {
     align-items: center;
     padding-left: 5em;
     padding-right: 5em;
-    opacity: 1;
+    word-break: keep-all;
 }
 
 .contents .title {
@@ -77,6 +84,11 @@ div.header {
     color: var(--neutral);
     margin-bottom: 1em;
 	text-align: center;
+}
+
+.contents .title .accent {
+	font-style: italic;
+	text-decoration: underline;
 }
 
 .contents .description {
@@ -92,7 +104,7 @@ div.header {
 	font-weight: 500;
 }
 
-.cards {
+.float {
     position: absolute;
     display: flex;
     width: 100vw;
@@ -100,13 +112,22 @@ div.header {
     left: 0;
     justify-content: center;
     align-items: center;
+	flex-direction: column;
 }
 
-.cards .container {
+.float .cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	margin-bottom: 5em;
+}
+
+.float .footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .card {
@@ -141,8 +162,7 @@ div.header {
     text-decoration: none;
 }
 
-.material-icons {
-    display: inline-block;
-    vertical-align: middle;
-    padding-bottom: 0.15em;
+.copyright {
+	margin-bottom: 10em;
+	color: var(--subtext)
 }
