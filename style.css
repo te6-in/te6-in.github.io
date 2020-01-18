@@ -185,4 +185,6 @@ body {
 	.contents .title .accent { font-weight: 800; }
 	.contents .description { font-weight: 500; }
 	.contents .description .accent { font-weight: 700; }
+	.card .cardname { font-weight: 500; }
+	.copyright {font-weight: 500; }
 }
