@@ -26,8 +26,8 @@
 	</div>
 	<div class="bg">
 		<div class="contents" id="fade">
-			<div class="title">Better experience<br>— from <span class="accent" id="randomColor">delicate</span> consideration</div>
-			<div class="description" id="dark"><span class="accent">주찬휘</span><br><span class="nolb">대한민국에서 UX 디자인을</span> <span class="nolb">공부하는 대학생입니다. 👨🏻‍💻</span></div>
+			<div class="title">Better experience<br>— from <span class="accent" id="randomColor1">delicate</span> consideration</div>
+			<div class="description" id="dark"><span class="nolb">대한민국에서 UX 디자인을 공부하는</span> <span class="nolb"><span class="accent" id="randomColor2">주찬휘</span>입니다. 👨🏻‍💻</span></div>
 		</div>
 	</div>
 	<div class="float">
@@ -74,7 +74,8 @@
 			var randomH = Math.floor(Math.random() * 360);
 			var randomColor = "hsl(x,54%,54%)".replace('x', randomH);
 			var randomColorHSLA = "hsla(x,54%,54%, 0.2)".replace('x', randomH);
-			document.getElementById("randomColor").style.color = randomColor;
+			document.getElementById("randomColor1").style.color = randomColor;
+			document.getElementById("randomColor2").style.color = randomColor;
 			document.documentElement.style.setProperty('--selection-bg', randomColorHSLA);
 		}
 

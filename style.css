@@ -12,7 +12,6 @@ body {
 	background: var(--selection-bg);
 }
 
-
 .material-icons {
 	display: inline-block;
 	vertical-align: middle;
@@ -88,11 +87,11 @@ body {
 
 .contents .title {
 	font-family: 'Nunito', 'Noto Sans KR', sans-serif;
-	font-size: calc(2em + 1.3vw);
+	font-size: calc(1.6em + 1.3vw);
 	font-weight: 400;
-	padding-top: 25vh;
+	padding-top: 28vh;
 	color: var(--neutral);
-	margin-bottom: 1em;
+	margin-bottom: 1.1em;
 	text-align: center;
 }
 
@@ -111,11 +110,7 @@ body {
 }
 
 .contents .description .accent {
-	font-size: 120%;
-	font-weight: 500;
-}
-
-.contents .description .a {
+	font-weight: 700;
 }
 
 .float {
@@ -166,7 +161,7 @@ body {
 
 .card .cardname {
 	color: var(--neutral);
-	font-size: 1.5em;
+	font-size: calc(1.1em + 0.5vw);
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 400;
 	text-align: center;
@@ -177,7 +172,7 @@ body {
 }
 
 .copyright {
-	margin-bottom: 10em;
+	margin-bottom: 16vh;
 	color: var(--subtext);
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 400;
