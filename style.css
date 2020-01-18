@@ -19,7 +19,11 @@ body {
 	padding-bottom: 0.15em;
 }
 
-div.header {
+.nolb {
+	display: inline-block;
+}
+
+.header {
 	position: fixed;
 	display: flex;
 	width: 100vw;
@@ -51,14 +55,14 @@ div.header {
 
 .header .title {
 	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
-	font-size: calc(1.4em + 0.8vw);
+	font-size: 1.8em;
 	color: var(--neutral);
 	font-weight: 700;
 	z-index: 1000;
 }
 
 .header .blank {
-	height: calc(0.5em + 2vw);
+	height: 2em;
 	z-index: 1000;
 }
 
@@ -77,14 +81,14 @@ div.header {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	padding-left: 6vw;
-	padding-right: 6vw;
+	padding-left: 10vw;
+	padding-right: 10vw;
 	word-break: keep-all;
 }
 
 .contents .title {
 	font-family: 'Nunito', 'Noto Sans KR', sans-serif;
-	font-size: calc(1em + 3vw);
+	font-size: calc(2em + 1.3vw);
 	font-weight: 400;
 	padding-top: 25vh;
 	color: var(--neutral);
@@ -98,22 +102,20 @@ div.header {
 	text-decoration: underline;
 }
 
-@media screen and (max-width: 420px) {
-	.contents .title {font-weight: 600;}
-	.contents .title .accent {font-weight: 800;}
-}
-
 .contents .description {
 	font-family: 'Noto Sans KR', sans-serif;
-	font-size: calc(1em + .8vw);
+	font-size: calc(1em + 0.5vw);
 	font-weight: 400;
 	color: var(--subtext);
 	text-align: center;
 }
 
 .contents .description .accent {
-	font-size: 1.2em;
+	font-size: 120%;
 	font-weight: 500;
+}
+
+.contents .description .a {
 }
 
 .float {
@@ -181,4 +183,11 @@ div.header {
 	font-weight: 400;
 	text-align: center;
 	font-size: 1em;
+}
+
+@media screen and (max-width: 420px) {
+	.contents .title { font-weight: 600; }
+	.contents .title .accent { font-weight: 800; }
+	.contents .description { font-weight: 500; }
+	.contents .description .accent { font-weight: 700; }
 }
