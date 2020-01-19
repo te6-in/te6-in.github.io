@@ -5,7 +5,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<title>🦈 te6.in</title>
 	<link rel="stylesheet" href="colors-light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
 	<link rel="stylesheet" href="colors-dark.css" media="(prefers-color-scheme: dark)">
@@ -24,10 +24,20 @@
 		</div>
 		<div class="bg"></div>
 	</div>
-	<div class="bg">
-		<div class="contents" id="fade">
+	<div class="main">
+		<div class="contents" id="fadeout">
 			<div class="title">Better experience<br>— from <span class="accent" id="randomColor1">delicate</span> consideration</div>
-			<div class="description" id="dark"><span class="nolb">대한민국에서 UX 디자인을 공부하는</span> <span class="nolb"><span class="accent" id="randomColor2">주찬휘</span>입니다. 👨🏻‍💻</span></div>
+			<div class="description" id="dark">대한민국에서 UX 디자인을 공부하는<br><span class="accent" id="randomColor2">주찬휘</span>입니다. 👨🏻‍💻</div>
+		</div>
+		<div class="contact">
+			<div class="ctcard">
+				<div class="bg" id="instagram"></div>
+			</div>
+			<div class="ctcard">
+			</div>
+			<div class="ctcard"></div>
+			<div class="ctcard"></div>
+			<div class="ctcard"></div>
 		</div>
 	</div>
 	<div class="float">
@@ -50,7 +60,7 @@
 					<div class="cardname">백색 소음 믹서</div>
 				</a>
 			</div>
-			<div class="card" id="cardhover">
+			<div class="card" id="cardhover" style="margin-bottom: 0.5em">
 				<a class="linkwithoutul" href="http://naver.com/">
 					<img class="cardbg" src="images/projectthumbnails/white_noise_player.png">
 					<div class="cardname">백색 소음 믹서</div>
@@ -66,7 +76,12 @@
 
 
 		function fade() {
-			document.getElementById("fade").style.opacity = (1 - document.documentElement.scrollTop / 500);
+			if (document.documentElement.scrollTop > document.documentElement.scrollHeight * 0.6) {
+				document.getElementById("fadein").style.opacity = 1
+			}
+			else {
+			document.getElementById("fadeout").style.opacity = (1 - document.documentElement.scrollTop / 500);
+			}
 		}
 
 
@@ -104,6 +119,7 @@
 			p.appendChild(newElement);
 		}
 
+		
 		function removeElement(elementId) {
 			// Removes an element from the document
 			var element = document.getElementById(elementId);

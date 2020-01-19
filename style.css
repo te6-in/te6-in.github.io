@@ -65,9 +65,8 @@ body {
 	z-index: 1000;
 }
 
-.bg {
+.main {
 	position: fixed;
-	display: flex;
 	width: 100vw;
 	height: 100vh;
 	top: 0;
@@ -75,13 +74,12 @@ body {
 }
 
 .contents {
+	position: absolute;
 	display: flex;
 	width: 100vw;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content:center;
 	align-items: center;
-	padding-left: 10vw;
-	padding-right: 10vw;
 	word-break: keep-all;
 }
 
@@ -113,6 +111,29 @@ body {
 	font-weight: 700;
 }
 
+.contact {
+	position: absolute;
+	display: flex;
+	width: 100vw;
+	top: 60vh;
+	flex-direction: row;
+	justify-content: center;;
+	align-items: center;
+}
+
+.ctcard {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 15em;
+	height: 6em;
+	background-color: lawngreen;
+	margin: 0.5em;
+}
+
+#instagram {
+}
+
 .float {
 	position: absolute;
 	display: flex;
@@ -129,39 +150,36 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 5em;
-}
-
-.float .footer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	margin-bottom: 10em;
 }
 
 .card {
-	margin: 0.5em 0.5em 3em 0.5em;
+	margin: 0.5em 0.5em 3.4em 0.5em;
 }
 
 .card .cardbg {
 	display: flex;
 	width: 80vw;
-	max-width: 48em;
+	max-width: 44.8em;
 	height: 45vw;
-	max-height: 27em;
-	margin-bottom: 1em;
+	max-height: 25.2em;
+	margin-bottom: 0.8em;
 	border-radius: 14px;
-	box-shadow: 0 0.4em 8px rgba(0, 0, 0, 0.2);
-	transition: box-shadow 0.5s;
+	box-shadow: 0 0.2em 8px rgba(0, 0, 0, 0.3);
+	transition: box-shadow 0.3s;
 }
 
 .card:hover .cardbg {
-	box-shadow: 0 0.6em 16px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0.5em 18px rgba(0, 0, 0, 0.4);
+}
+
+.card:active .cardbg {
+	box-shadow: 0 0.5em 18px rgba(0, 0, 0, 0.4);
 }
 
 .card .cardname {
 	color: var(--neutral);
-	font-size: calc(1.1em + 0.5vw);
+	font-size: 1.4em;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 400;
 	text-align: center;
@@ -171,8 +189,15 @@ body {
 	text-decoration: none;
 }
 
+.float .footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .copyright {
-	margin-bottom: 16vh;
+	margin-bottom: 10em;
 	color: var(--subtext);
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 400;
@@ -185,6 +210,9 @@ body {
 	.contents .title .accent { font-weight: 800; }
 	.contents .description { font-weight: 500; }
 	.contents .description .accent { font-weight: 700; }
-	.card .cardname { font-weight: 500; }
-	.copyright {font-weight: 500; }
+	.float .cards { margin-bottom: 16vh; }
+	.card { margin-bottom: 4vh; }
+	.card .cardbg { border-radius: 10px; width: 88vw; height: 49.5vw; }
+	.card .cardname { font-weight: 500; font-size: 4.6vw; }
+	.copyright { font-weight: 500; margin-bottom: 16vh; }
 }
