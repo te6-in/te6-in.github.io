@@ -144,7 +144,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 }
 
 .contact .title .memoji {
@@ -164,7 +164,6 @@ body {
 	font-weight: 600;
 	color: var(--neutral);
 	margin-top: 1em;
-	margin-bottom: 1em;
 }
 
 .contact .cards {
@@ -174,6 +173,7 @@ body {
 	flex-direction: row;
 	flex-wrap: wrap;
 	width: 80vw;
+	margin-bottom: 2em;
 }
 
 .contact .cards .container {
@@ -186,23 +186,52 @@ body {
 }
 
 .contact .cards .ctcard {
+}
+
+.ctcard .ctcardbg {
+	width: 188px;
+	height: 68px;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
-	width: 13em;
-	;
-	height: 4.2em;
-	border-radius: 12px;
+	flex-direction: row;
+	border-radius: 18px;
 	background-color: white;
-	margin: 0.6em;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0.2em 4px rgba(0, 0, 0, 0.2);
 	transition: box-shadow 0.3s;
 }
 
-.ctcard:hover {
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+.ctcardbg:hover {
+	box-shadow: 0 0.5em 10px rgba(0, 0, 0, 0.4);
 }
 
+.ctcardbg:active {
+	box-shadow: 0 0.3em 6px rgba(0, 0, 0, 0.4);
+}
+
+.ctcard .ctcardicon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	margin: 14px;
+}
+
+#instagram {
+	width: 28px;
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+.ctcard .ctcardname {
+	color: black;
+	font-family: 'Ubuntu', 'Noto Sans KR', sans-serif;
+	font-size: 24px;
+	width: 100px;
+	text-align: center;
+	margin-right: 20px;
+}
 
 .contact .footer {
 	display: flex;
@@ -274,7 +303,7 @@ body {
 	text-align: center;
 }
 
-.card .linkwithoutul {
+.linkwithoutul {
 	text-decoration: none;
 }
 
