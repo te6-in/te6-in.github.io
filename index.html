@@ -29,61 +29,85 @@
 			<div class="title">Better experience<br>— from <span class="accent" id="randomColor1">delicate</span> consideration</div>
 			<div class="description" id="dark">대한민국에서 UX 디자인을 공부하는<br><span class="accent" id="randomColor2">주찬휘</span>입니다. 👨🏻‍💻</div>
 		</div>
-		<!--
-		<div class="contact">
-			<div class="ctcard">
-				<div class="bg" id="instagram"></div>
-			</div>
-			<div class="ctcard">
-			</div>
-			<div class="ctcard"></div>
-			<div class="ctcard"></div>
-			<div class="ctcard"></div>
-		</div>
-		-->
 	</div>
 	<div class="float">
 		<div class="cards">
-			<div class="card" id="cardhover">
+			<div class="card">
 				<a class="linkwithoutul" href="http://naver.com/">
 					<img class="cardbg" src="images/projectthumbnails/kakaomap_redesign.png">
 					<div class="cardname">카카오맵 리디자인</div>
 				</a>
 			</div>
-			<div class="card" id="cardhover">
+			<div class="card">
 				<a class="linkwithoutul" href="http://naver.com/">
 					<img class="cardbg" src="images/projectthumbnails/white_noise_player.png">
 					<div class="cardname">백색 소음 믹서</div>
 				</a>
 			</div>
-			<div class="card" id="cardhover">
+			<div class="card">
 				<a class="linkwithoutul" href="http://naver.com/">
 					<img class="cardbg" src="images/projectthumbnails/white_noise_player.png">
 					<div class="cardname">백색 소음 믹서</div>
 				</a>
 			</div>
-			<div class="card" id="cardhover" style="margin-bottom: 0.5em">
+			<div class="card" style="margin-bottom: 0.5em">
 				<a class="linkwithoutul" href="http://naver.com/">
 					<img class="cardbg" src="images/projectthumbnails/white_noise_player.png">
 					<div class="cardname">백색 소음 믹서</div>
 				</a>
 			</div>
 		</div>
-		<div class="footer">
-			<span class="copyright">Copyright © 2020 주찬휘. 모든 권리 보유.</span>
+		<div class="blank"></div>
+	</div>
+	<div class="main2">
+		<div class="contact" id="fadein">
+			<div class="title">
+				<div class="memoji"><img class="image" src="images/assets/memoji.png">
+				</div>
+				<div class="message">Find me on:</div>
+			</div>
+			<div class="cards">
+				<div class="container">
+					<div class="ctcard">
+						<a href="http://naver.com/"><img class="ctcardbg" src=""></a>
+					</div>
+					<div class="ctcard"></div>
+					<div class="ctcard"></div>
+					<div class="ctcard"></div>
+					<div class="ctcard"></div>
+					<div class="ctcard"></div>
+				</div>
+			</div>
+			<div class="footer">
+				<span class="copyright">Copyright © 2020 주찬휘. 모든 권리 보유.</span>
+			</div>
 		</div>
 	</div>
+
 	<script>
 		const media = window.matchMedia('(prefers-color-scheme: dark)');
 
-
-		function fade() {
-			if (document.documentElement.scrollTop > document.documentElement.scrollHeight * 0.6) {
-				document.getElementById("fadein").style.opacity = 1
+		/*
+		function hideWhenTransparent() {
+			if (document.getElementById("fadeout").style.opacity >= 0) {
+				document.getElementById("fadein").style.display = "none";
 			}
 			else {
-			document.getElementById("fadeout").style.opacity = (1 - document.documentElement.scrollTop / 500);
+				document.getElementById("fadein").style.display = "flex";
 			}
+			if (document.getElementById("fadein").style.opacity <= 0) {
+				document.getElementById("fadeout").style.display = "flex";
+			}
+			else {
+				document.getElementById("fadeout").style.display = "none";
+			}
+		}
+		*/
+
+		function fade() {
+			//hideWhenTransparent();
+			document.getElementById("fadein").style.opacity = (document.documentElement.scrollTop / 1000);
+			document.getElementById("fadeout").style.opacity = (1 - document.documentElement.scrollTop / 500);
 		}
 
 
@@ -121,13 +145,15 @@
 			p.appendChild(newElement);
 		}
 
-		
+
 		function removeElement(elementId) {
 			// Removes an element from the document
 			var element = document.getElementById(elementId);
 			element.parentNode.removeChild(element);
 		}
 
+
+		//hideWhenTransparent();
 
 		showDarkModeText();
 		media.addListener(() => {
@@ -143,7 +169,6 @@
 		window.onscroll = function() {
 			fade()
 		};
-
 	</script>
 </body>
 
