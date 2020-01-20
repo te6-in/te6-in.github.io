@@ -28,7 +28,7 @@
 	<div class="main">
 		<div class="contents" id="fadeout">
 			<div class="title">Better experience<br>— from <span class="accent" id="randomColor1">delicate</span> consideration</div>
-			<div class="description" id="dark">대한민국에서 UX 디자인을 공부하는<br><span class="accent" id="randomColor2">주찬휘</span>입니다. 👨🏻‍💻</div>
+			<div class="description">대한민국에서 UX 디자인을 공부하는<br><span class="accent" id="randomColor2">주찬휘</span>입니다. 👨🏻‍💻</div>
 		</div>
 	</div>
 	<div class="float">
@@ -95,7 +95,7 @@
 				</div>
 			</div>
 			<div class="footer">
-				<span class="copyright">Copyright © 2020 주찬휘. 모든 권리 보유.</span>
+				<span class="copyright">Copyright © 2020 주찬휘. 모든 권리 보유.<br><span id="darktxt">　</span></span>
 			</div>
 		</div>
 	</div>
@@ -126,7 +126,6 @@
 			document.getElementById("fadeout").style.opacity = (1 - document.documentElement.scrollTop / 500);
 		}
 
-
 		function randomColor() {
 			var randomH = Math.floor(Math.random() * 360);
 			var randomColor = "hsl(x,54%,54%)".replace('x', randomH);
@@ -136,38 +135,18 @@
 			document.documentElement.style.setProperty('--selection-bg', randomColorHSLA);
 		}
 
-
 		function isDarkMode() {
 			return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
 		}
 
-
 		function showDarkModeText() {
 			if (isDarkMode() == 1) {
-				addElement("dark", "small", "darktxt", "<br>다크 모드 🌙");
-				setTimeout(() => {
-					removeElement("darktxt");
-				}, 1500);
+				document.getElementById("darktxt").innerHTML += "다크 모드 🌙　"
+			}
+			else {
+				document.getElementById("darktxt").innerHTML = "　"
 			}
 		}
-
-
-		function addElement(parentId, elementTag, elementId, html) {
-			// Adds an element to the document
-			var p = document.getElementById(parentId);
-			var newElement = document.createElement(elementTag);
-			newElement.setAttribute('id', elementId);
-			newElement.innerHTML = html;
-			p.appendChild(newElement);
-		}
-
-
-		function removeElement(elementId) {
-			// Removes an element from the document
-			var element = document.getElementById(elementId);
-			element.parentNode.removeChild(element);
-		}
-
 
 		//hideWhenTransparent();
 
