@@ -195,19 +195,11 @@ body {
 	border-radius: 16px;
 	background-color: white;
 	box-shadow: 0 0.2em 4px rgba(0, 0, 0, 0.1);
-	transition: box-shadow 0.3s;
+	transition: box-shadow 0.4s, background-color 0.4s;
 }
 
 .ctcardbg:hover {
 	box-shadow: 0 0.5em 10px rgba(0, 0, 0, 0.2);
-}
-
-.ctcardbg:hover #name {
-	opacity: 0;
-}
-
-.ctcardbg:hover #id {
-	opacity: 1;
 }
 
 .ctcardbg:active {
@@ -221,10 +213,6 @@ body {
 	width: 4em;
 	height: 4em;
 	flex-shrink: 0;
-}
-
-#instagram {
-	width: 2em;
 }
 
 .ctcard .ctcardnamecontainer {
@@ -243,12 +231,32 @@ body {
 
 #name {
 	opacity: 1;
-	transition: opacity 0.3s;
 }
 
 #id {
 	opacity: 0;
-	transition: opacity 0.3s;
+}
+
+.ctcardbg:hover #name {
+	opacity: 0;
+}
+
+.ctcardbg:hover #id {
+	opacity: 1;
+}
+
+#bg_behance:hover {
+	background-color: cornflowerblue;
+	transition: background-color 0.5s;
+}
+
+#bg_behance:hover #id {
+	color: white;
+}
+
+#icn_instagram {
+	width: 2em;
+	height: 2em;
 }
 
 .contact .footer {
