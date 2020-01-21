@@ -29,9 +29,9 @@ function fade() {
 	if (getScrollPercent() < 0.25) {
 		document.getElementById("fadeout").style.opacity = 1 - (getScrollPercent() * 4);
 		document.getElementById("fadein").style.opacity = 0;	
-	} else if (getScrollPercent() > 0.9) {
+	} else if (getScrollPercent() > 0.87) {
 		document.getElementById("fadeout").style.opacity = 0;
-		document.getElementById("fadein").style.opacity = ((getScrollPercent()) - 0.9) * 10;
+		document.getElementById("fadein").style.opacity = ((getScrollPercent()) - 0.87) * 13;
 	} else {
 		document.getElementById("fadeout").style.opacity = 0;
 		document.getElementById("fadein").style.opacity = 0;
@@ -76,3 +76,7 @@ window.onunload = function() {
 window.onscroll = function() {
 	fade();
 };
+
+window.onresize = function() {
+	fade();
+}
