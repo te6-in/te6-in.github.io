@@ -144,7 +144,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	margin-bottom: 3em;
+	margin-bottom: 2em;
 }
 
 .contact .title .memoji {
@@ -156,14 +156,6 @@ body {
 	width: 100%;
 	height: 100%;
 	filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.14));
-}
-
-.contact .title .message {
-	font-family: 'Nunito', 'Noto Sans KR', sans-serif;
-	font-size: 1.4em;
-	font-weight: 600;
-	color: var(--neutral);
-	margin-top: 1em;
 }
 
 .contact .cards {
@@ -186,51 +178,77 @@ body {
 }
 
 .contact .cards .ctcard {
+	margin: 0.5em;
+}
+
+.contact .cards .ctcard .linkwithoutul {
+	display: block;
 }
 
 .ctcard .ctcardbg {
-	width: 188px;
-	height: 68px;
+	width: 13em;
+	height: 4em;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: row;
-	border-radius: 18px;
+	border-radius: 16px;
 	background-color: white;
-	box-shadow: 0 0.2em 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0.2em 4px rgba(0, 0, 0, 0.1);
 	transition: box-shadow 0.3s;
 }
 
 .ctcardbg:hover {
-	box-shadow: 0 0.5em 10px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0.5em 10px rgba(0, 0, 0, 0.2);
+}
+
+.ctcardbg:hover #name {
+	opacity: 0;
+}
+
+.ctcardbg:hover #id {
+	opacity: 1;
 }
 
 .ctcardbg:active {
-	box-shadow: 0 0.3em 6px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0.3em 6px rgba(0, 0, 0, 0.24);
 }
 
 .ctcard .ctcardicon {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 40px;
-	height: 40px;
-	margin: 14px;
+	width: 4em;
+	height: 4em;
+	flex-shrink: 0;
 }
 
 #instagram {
-	width: 28px;
-	margin-left: 6px;
-	margin-right: 6px;
+	width: 2em;
 }
 
-.ctcard .ctcardname {
+.ctcard .ctcardnamecontainer {
 	color: black;
+	display: inline-block;
+	position: absolute;
 	font-family: 'Ubuntu', 'Noto Sans KR', sans-serif;
-	font-size: 24px;
-	width: 100px;
 	text-align: center;
-	margin-right: 20px;
+	width: 8em;
+	padding-left: 4em;
+}
+
+.ctcard .ctcardnamecontainer .ctcardname {
+	font-size: 1.3em;
+}
+
+#name {
+	opacity: 1;
+	transition: opacity 0.3s;
+}
+
+#id {
+	opacity: 0;
+	transition: opacity 0.3s;
 }
 
 .contact .footer {

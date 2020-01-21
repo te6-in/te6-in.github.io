@@ -13,7 +13,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap&subset=korean" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,700i,800i&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:500&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
@@ -65,32 +65,86 @@
 			<div class="title">
 				<div class="memoji"><img class="image" src="images/assets/memoji.png">
 				</div>
-				<div class="message">Find me on:</div>
 			</div>
 			<div class="cards">
 				<div class="container">
 					<div class="ctcard">
-						<a class="linkwithoutul" href="http://instagr.am/te6.in">
+						<a class="linkwithoutul" href="http://be.net/te_6">
 							<div class="ctcardbg">
-								<div class="ctcardicon"><object class="snslogo" id="instagram" type="image/svg+xml" data="images/assets/icn_instagram.svg">최신 브라우저 사용을 부탁드립니다.</object></div>
-								<div class="ctcardname">te6.in</div>
+								<div class="ctcardicon"><object class="snslogo" id="instagram" type="image/svg+xml" data="images/assets/icn_instagram.svg"></object></div>
+								<div class="ctcardnamecontainer" id="name">
+									<div class="ctcardname">Behance</div>
+								</div>
+								<div class="ctcardnamecontainer" id="id">
+									<div class="ctcardname">te_6</div>
+								</div>
 							</div>
 						</a>
 					</div>
 					<div class="ctcard">
-						<a href="http://naver.com/"></a>
+						<a class="linkwithoutul" href="http://instagr.am/te6.in">
+							<div class="ctcardbg">
+								<div class="ctcardicon"><object class="snslogo" id="instagram" type="image/svg+xml" data="images/assets/icn_instagram.svg"></object></div>
+								<div class="ctcardnamecontainer" id="name">
+									<div class="ctcardname">Instagram</div>
+								</div>
+								<div class="ctcardnamecontainer" id="id">
+									<div class="ctcardname">te6.in</div>
+								</div>
+							</div>
+						</a>
 					</div>
 					<div class="ctcard">
-						<a href="http://naver.com/"></a>
+						<a class="linkwithoutul" href="http://zen.ly/te6">
+							<div class="ctcardbg">
+								<div class="ctcardicon"><object class="snslogo" id="instagram" type="image/svg+xml" data="images/assets/icn_instagram.svg"></object></div>
+								<div class="ctcardnamecontainer" id="name">
+									<div class="ctcardname">zenly</div>
+								</div>
+								<div class="ctcardnamecontainer" id="id">
+									<div class="ctcardname">te6</div>
+								</div>
+							</div>
+						</a>
 					</div>
 					<div class="ctcard">
-						<a href="http://naver.com/"></a>
+						<a class="linkwithoutul" href="http://reddit.com/user/j_ooch">
+							<div class="ctcardbg">
+								<div class="ctcardicon"><object class="snslogo" id="instagram" type="image/svg+xml" data="images/assets/icn_instagram.svg"></object></div>
+								<div class="ctcardnamecontainer" id="name">
+									<div class="ctcardname">reddit</div>
+								</div>
+								<div class="ctcardnamecontainer" id="id">
+									<div class="ctcardname">j_ooch</div>
+								</div>
+							</div>
+						</a>
 					</div>
 					<div class="ctcard">
-						<a href="http://naver.com/"></a>
+						<a class="linkwithoutul" href="http://fb.me/te6.in">
+							<div class="ctcardbg">
+								<div class="ctcardicon"><object class="snslogo" id="instagram" type="image/svg+xml" data="images/assets/icn_instagram.svg"></object></div>
+								<div class="ctcardnamecontainer" id="name">
+									<div class="ctcardname">Facebook</div>
+								</div>
+								<div class="ctcardnamecontainer" id="id">
+									<div class="ctcardname">te6.in</div>
+								</div>
+							</div>
+						</a>
 					</div>
 					<div class="ctcard">
-						<a href="http://naver.com/"></a>
+						<a class="linkwithoutul" href="http://music.apple.com/profile/_0">
+							<div class="ctcardbg">
+								<div class="ctcardicon"><object class="snslogo" id="instagram" type="image/svg+xml" data="images/assets/icn_instagram.svg"></object></div>
+								<div class="ctcardnamecontainer" id="name">
+									<div class="ctcardname">Apple Music</div>
+								</div>
+								<div class="ctcardnamecontainer" id="id">
+									<div class="ctcardname">_0</div>
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -142,8 +196,7 @@
 		function showDarkModeText() {
 			if (isDarkMode() == 1) {
 				document.getElementById("darktxt").innerHTML += "다크 모드 🌙　"
-			}
-			else {
+			} else {
 				document.getElementById("darktxt").innerHTML = "　"
 			}
 		}
