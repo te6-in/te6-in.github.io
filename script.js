@@ -29,9 +29,9 @@ function fade() {
 	if (getScrollPercent() < 0.25) {
 		document.getElementById("fadeout").style.opacity = 1 - (getScrollPercent() * 4);
 		document.getElementById("fadein").style.opacity = 0;	
-	} else if (getScrollPercent() > 0.87) {
+	} else if (getScrollPercent() > 0.75) {
 		document.getElementById("fadeout").style.opacity = 0;
-		document.getElementById("fadein").style.opacity = ((getScrollPercent()) - 0.87) * 13;
+		document.getElementById("fadein").style.opacity = ((getScrollPercent()) - 0.75) * 4;
 	} else {
 		document.getElementById("fadeout").style.opacity = 0;
 		document.getElementById("fadein").style.opacity = 0;
@@ -57,6 +57,16 @@ function showDarkModeText() {
 		document.getElementById("darktxt").innerHTML += "다크 모드 🌙　";
 	} else {
 		document.getElementById("darktxt").innerHTML = "　";
+	}
+}
+
+function goOpposite() {
+	if (getScrollPercent() == 0) {
+		document.body.scrollTop = document.body.scrollHeight;
+		document.documentElement.scrollTop = document.documentElement.scrollHeight;
+	} else {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
 	}
 }
 
