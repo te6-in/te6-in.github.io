@@ -5,6 +5,7 @@ body {
 }
 
 :root {
+	--randomcolor: none;
 	--selection-bg: none;
 }
 
@@ -12,14 +13,12 @@ body {
 	background: var(--selection-bg);
 }
 
-.material-icons {
-	display: inline-block;
-	vertical-align: middle;
-	padding-bottom: 0.15em;
-}
-
 .nolb {
 	display: inline-block;
+}
+
+.linkwithoutul {
+	text-decoration: none;
 }
 
 .header {
@@ -49,9 +48,10 @@ body {
 	height: 100%;
 	background: linear-gradient(var(--bg), var(--tbg));
 	z-index: 99999;
+	opacity: 0.9;
 }
 
-.header .title {
+.header .container .title {
 	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
 	font-size: 1.8em;
 	color: var(--neutral);
@@ -60,7 +60,7 @@ body {
 	z-index: 999999;
 }
 
-.header .blank {
+.header .container .blank {
 	height: 2em;
 	z-index: 999999;
 }
@@ -89,7 +89,7 @@ body {
 	word-break: keep-all;
 }
 
-.contents .title {
+.main .contents .title {
 	font-family: 'Nunito', 'Noto Sans KR', sans-serif;
 	font-size: calc(1.6em + 1.3vw);
 	font-weight: 400;
@@ -98,13 +98,13 @@ body {
 	text-align: center;
 }
 
-.contents .title .accent {
+.main .contents .title .accent {
 	font-weight: 700;
 	font-style: italic;
 	text-decoration: underline;
 }
 
-.contents .description {
+.main .contents .description {
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: calc(1em + 0.5vw);
 	font-weight: 400;
@@ -112,166 +112,8 @@ body {
 	text-align: center;
 }
 
-.contents .description .accent {
+.main .contents .description .accent {
 	font-weight: 700;
-}
-
-.main2 {
-	position: fixed;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	z-index: 1;
-}
-
-.main2 .contact {
-	position: absolute;
-	display: flex;
-	width: 100vw;
-	left: 0;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	opacity: 0;
-}
-
-.contact .title {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-bottom: 2em;
-}
-
-.contact .title .memoji {
-	width: 12em;
-	height: 12em;
-}
-
-.contact .title .memoji .image {
-	width: 100%;
-	height: 100%;
-	filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.14));
-}
-
-.contact .cards {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	flex-wrap: wrap;
-	width: 80vw;
-	margin-bottom: 2em;
-}
-
-.contact .cards .container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	flex-wrap: wrap;
-	max-width: 50em;
-}
-
-.contact .cards .ctcard {
-	margin: 0.5em;
-}
-
-.contact .cards .ctcard .linkwithoutul {
-	display: block;
-}
-
-.ctcard .ctcardbg {
-	width: 13em;
-	height: 4em;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	flex-direction: row;
-	border-radius: 16px;
-	background-color: white;
-	box-shadow: 0 0.2em 4px rgba(0, 0, 0, 0.1);
-	transition: box-shadow 0.4s, background-color 0.4s;
-}
-
-.ctcardbg:hover {
-	box-shadow: 0 0.5em 10px rgba(0, 0, 0, 0.2);
-}
-
-.ctcardbg:active {
-	box-shadow: 0 0.3em 6px rgba(0, 0, 0, 0.24);
-}
-
-.ctcard .ctcardicon {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 4em;
-	height: 4em;
-	flex-shrink: 0;
-}
-
-.ctcard .ctcardnamecontainer {
-	color: black;
-	display: inline-block;
-	position: absolute;
-	font-family: 'Ubuntu', 'Noto Sans KR', sans-serif;
-	text-align: center;
-	width: 8em;
-	padding-left: 4em;
-}
-
-.ctcard .ctcardnamecontainer .ctcardname {
-	font-size: 1.3em;
-}
-
-#name {
-	opacity: 1;
-}
-
-#id {
-	opacity: 0;
-}
-
-.ctcardbg:hover #name {
-	opacity: 0;
-}
-
-.ctcardbg:hover #id {
-	opacity: 1;
-}
-
-#bg_behance:hover {
-	background-color: cornflowerblue;
-	transition: background-color 0.5s;
-}
-
-#bg_behance:hover #id {
-	color: white;
-}
-
-#icn_instagram {
-	width: 2em;
-	height: 2em;
-}
-
-.contact .footer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.contact .footer .copyright {
-	color: var(--subtext);
-	font-family: 'Noto Sans KR', sans-serif;
-	font-weight: 400;
-	text-align: center;
-	font-size: 1em;
 }
 
 .float {
@@ -294,14 +136,14 @@ body {
 }
 
 .float .blank {
-	height: 100em;
+	height: 100vh;
 }
 
-.card {
+.float .cards .card {
 	margin: 0.5em 0.5em 3.4em 0.5em;
 }
 
-.card .cardbg {
+.float .cards .card .cardbg {
 	display: flex;
 	width: 80vw;
 	max-width: 44.8em;
@@ -313,15 +155,17 @@ body {
 	transition: box-shadow 0.3s;
 }
 
-.card:hover .cardbg {
+.float .cards .card:hover .cardbg {
 	box-shadow: 0 0.5em 18px rgba(0, 0, 0, 0.4);
+	transition: box-shadow 0.3s;
 }
 
-.card:active .cardbg {
+.float .cards .card:active .cardbg {
 	box-shadow: 0 0.3em 12px rgba(0, 0, 0, 0.4);
+	transition: box-shadow 0.3s;
 }
 
-.card .cardname {
+.float .cards .card .cardname {
 	color: var(--neutral);
 	font-size: 1.4em;
 	font-family: 'Noto Sans KR', sans-serif;
@@ -329,8 +173,168 @@ body {
 	text-align: center;
 }
 
-.linkwithoutul {
-	text-decoration: none;
+.main2 {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.main2 .contents {
+	position: absolute;
+	display: flex;
+	width: 100vw;
+	left: 0;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+}
+
+.main2 .contents .title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 2em;
+}
+
+.main2 .contents .title .memoji {
+	width: 12em;
+	height: 12em;
+}
+
+.main2 .contents .title .memoji .image {
+	width: 100%;
+	height: 100%;
+	filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.14));
+}
+
+.main2 .contents .cards {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 80vw;
+	margin-bottom: 2em;
+}
+
+.main2 .contents .cards .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 6em;
+}
+
+.main2 .contents .cards .card .cardbg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 4em;
+	height: 4em;
+	margin: 0.5em;
+	border-radius: 0.8em;
+	background-color: var(--ctcardbg);
+	box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s, box-shadow 0.3s, width 0.3s, height 0.3s;
+}
+
+.main2 .contents .cards .cardbg:hover {
+	width: 5em;
+	height: 5em;
+	box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+	transition: background-color 0.3s, box-shadow 0.3s, width 0.3s, height 0.3s;
+}
+
+.main2 .contents .cards .cardbg:hover .logo {
+	width: 2.5em;
+	height: 2.5em;
+	fill: #FFF;
+	filter: drop-shadow(0 0.25em 0.25em rgba(0, 0, 0, 0.25));
+	transition: fill 0.3s, width 0.3s, height 0.3s;
+}
+
+.main2 .contents .cards .cardbg:active {
+	box-shadow: 0 0.3em 0.4em rgba(0, 0, 0, 0.4);
+	transition: box-shadow 0.3s;
+}
+
+.main2 .contents .cards .card .logo {
+	width: 2em;
+	height: 2em;
+	fill: var(--ctcardlogo);
+	transition: fill 0.3s, width 0.3s, height 0.3s;
+	z-index: 1;
+}
+
+#mail .cardbg:hover {
+	background-color: var(--randomcolor);
+}
+
+#behance .cardbg:hover {
+	background-color: #0056FF;
+}
+
+#instagram .instagrambg {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	border-radius: 0.8em;
+	z-index: 0;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+#instagram .cardbg:hover .instagrambg {
+	opacity: 1;
+	transition: opacity 0.3s;
+}
+
+#zenly .logowrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+#zenly .logo {
+	filter: brightness(0);
+}
+
+#zenly .cardbg:hover {
+	background-color: #00BBFF;
+}
+
+#zenly .cardbg:hover .logowrap {
+	filter: none;
+}
+
+#zenly .cardbg:hover .logo {
+	filter: none;
+}
+
+.main2 .contents .footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.main2 .contents .footer .copyright {
+	color: var(--subtext);
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 400;
+	text-align: center;
+	font-size: 1em;
 }
 
 @media screen and (max-width: 420px) {

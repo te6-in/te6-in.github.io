@@ -3,4 +3,10 @@
 	--subtext: #8D9597;
 	--bg: #F3F6F6;
 	--tbg: #F3F6F600;
+	--ctcardbg: white;
+	--ctcardlogo: #69767A;
+}
+
+#zenly .logowrap {
+	filter: invert(45%) sepia(7%) saturate(571%) hue-rotate(148deg) brightness(98%) contrast(86%);
 }
