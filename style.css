@@ -307,7 +307,7 @@ body {
 	margin-bottom: 0.6em;
 }
 
-#darktxt {
+.main2 .contents .footer .darktxt {
 	color: var(--subtext);
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 400;
@@ -371,7 +371,7 @@ body {
 		width: 2.5em;
 		height: 2.5em;
 	}
-	.crnolb {
+	.main2 .contents .footer .copyright .crnolb {
 		display: inline-block;
 		width: 100vw;
 	}
