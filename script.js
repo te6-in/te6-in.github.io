@@ -1,17 +1,17 @@
 const media = window.matchMedia('(prefers-color-scheme: dark)');
 
 function getScrollPercent() {
-    var h = document.documentElement;
-    var b = document.body;
-    var st = 'scrollTop';
-    var sh = 'scrollHeight';
-    return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight);
+	var h = document.documentElement;
+	var b = document.body;
+	var st = 'scrollTop';
+	var sh = 'scrollHeight';
+	return (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight);
 }
 
 function fade() {
 	if (getScrollPercent() < 0.25) {
 		document.getElementById("fadeout").style.opacity = 1 - (getScrollPercent() * 4);
-		document.getElementById("fadein").style.opacity = 0;	
+		document.getElementById("fadein").style.opacity = 0;
 	} else if (getScrollPercent() > 0.75) {
 		document.getElementById("fadeout").style.opacity = 0;
 		document.getElementById("fadein").style.opacity = ((getScrollPercent()) - 0.75) * 4;
@@ -68,21 +68,17 @@ function goOpposite() {
 randomColor();
 fade();
 hide();
-
 showDarkModeText();
 media.addListener(() => {
 	showDarkModeText();
 });
-
 window.onunload = function() {
 	window.scrollTo(0, 0);
 };
-
 window.onscroll = function() {
 	fade();
 	hide();
 };
-
 window.onresize = function() {
 	fade();
 	hide();

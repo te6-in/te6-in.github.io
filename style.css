@@ -314,34 +314,27 @@ body {
 	.contents .title {
 		font-weight: 600;
 	}
-
 	.contents .title .accent {
 		font-weight: 800;
 	}
-
 	.contents .description {
 		font-weight: 500;
 	}
-
 	.contents .description .accent {
 		font-weight: 700;
 	}
-
 	.card {
 		margin-bottom: 4vh;
 	}
-
 	.card .cardbg {
 		border-radius: 10px;
 		width: 88vw;
 		height: 49.5vw;
 	}
-
 	.card .cardname {
 		font-weight: 500;
 		font-size: 4.6vw;
 	}
-
 	.copyright {
 		font-weight: 500;
 	}
