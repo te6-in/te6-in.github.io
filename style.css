@@ -201,7 +201,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	margin-bottom: 2em;
+	margin-bottom: 1.5em;
 }
 
 .main2 .contents .title .memoji {
@@ -219,10 +219,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: row;
-	flex-wrap: wrap;
-	width: 80vw;
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 }
 
 .main2 .contents .cards .container {
@@ -248,18 +245,10 @@ body {
 }
 
 .main2 .contents .cards .cardbg:hover {
-	width: 5em;
-	height: 5em;
+	width: 4.5em;
+	height: 4.5em;
 	box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
 	transition: background-color 0.3s, box-shadow 0.3s, width 0.3s, height 0.3s;
-}
-
-.main2 .contents .cards .cardbg:hover .logo {
-	width: 2.5em;
-	height: 2.5em;
-	fill: #FFF;
-	filter: drop-shadow(0 0.25em 0.25em rgba(0, 0, 0, 0.25));
-	transition: fill 0.3s, width 0.3s, height 0.3s;
 }
 
 .main2 .contents .cards .cardbg:active {
@@ -273,6 +262,14 @@ body {
 	fill: var(--ctcardlogo);
 	transition: fill 0.3s, width 0.3s, height 0.3s;
 	z-index: 1;
+}
+
+.main2 .contents .cards .cardbg:hover .logo {
+	width: 2.25em;
+	height: 2.25em;
+	fill: #FFF;
+	filter: drop-shadow(0 0.25em 0.25em rgba(0, 0, 0, 0.25));
+	transition: fill 0.3s, width 0.3s, height 0.3s;
 }
 
 #behance .cardbg:hover {
@@ -307,6 +304,15 @@ body {
 	font-weight: 400;
 	text-align: center;
 	font-size: 1em;
+	margin-bottom: 0.6em;
+}
+
+#darktxt {
+	color: var(--subtext);
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 400;
+	text-align: center;
+	font-size: 0.8em;
 }
 
 @media screen and (max-width: 420px) {
@@ -333,5 +339,43 @@ body {
 	.float .cards .card .cardname {
 		font-weight: 500;
 		font-size: 4.6vw;
+	}
+	.main2 .contents .title {
+		margin-bottom: 0.8em;
+	}
+	.main2 .contents .title .memoji {
+		width: 10em;
+		height: 10em;
+	}
+	.main2 .contents .cards {
+		margin-bottom: 2em;
+	}
+	.main2 .contents .cards .container {
+		height: 6em;
+	}
+	.main2 .contents .cards .card .cardbg {
+		width: 4em;
+		height: 4em;
+		margin: 0.5em;
+		border-radius: 0.8em;
+	}
+	.main2 .contents .cards .cardbg:hover {
+		width: 5em;
+		height: 5em;
+	}
+	.main2 .contents .cards .card .logo {
+		width: 2em;
+		height: 2em;
+	}
+	.main2 .contents .cards .cardbg:hover .logo {
+		width: 2.5em;
+		height: 2.5em;
+	}
+	.crnolb {
+		display: inline-block;
+		width: 100vw;
+	}
+	#instagram .instagrambg {
+		border-radius: 0.8em;
 	}
 }
