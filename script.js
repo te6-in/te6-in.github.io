@@ -1,22 +1,5 @@
 const media = window.matchMedia('(prefers-color-scheme: dark)');
 
-/*
-function hideWhenTransparent() {
-	if (document.getElementById("fadeout").style.opacity >= 0) {
-		document.getElementById("fadein").style.display = "none";
-	}
-	else {
-		document.getElementById("fadein").style.display = "flex";
-	}
-	if (document.getElementById("fadein").style.opacity <= 0) {
-		document.getElementById("fadeout").style.display = "flex";
-	}
-	else {
-		document.getElementById("fadeout").style.display = "none";
-	}
-}
-*/
-
 function getScrollPercent() {
     var h = document.documentElement;
     var b = document.body;
@@ -38,13 +21,25 @@ function fade() {
 	}
 }
 
+function hide() {
+	if (document.getElementById("fadeout").style.opacity > 0) {
+		document.getElementById("fadeout").style.visibility = "visible";
+	} else {
+		document.getElementById("fadeout").style.visibility = "hidden";
+	}
+	if (document.getElementById("fadein").style.opacity > 0) {
+		document.getElementById("fadein").style.visibility = "visible";
+	} else {
+		document.getElementById("fadein").style.visibility = "hidden";
+	}
+}
+
 function randomColor() {
 	var randomH = Math.floor(Math.random() * 360);
 	var randomColor = "hsl(x,54%,54%)".replace('x', randomH);
 	var randomColorHSLA = "hsla(x,54%,54%, 0.2)".replace('x', randomH);
 	document.getElementById("randomColor1").style.color = randomColor;
 	document.getElementById("randomColor2").style.color = randomColor;
-	document.documentElement.style.setProperty('--randomcolor', randomColor);
 	document.documentElement.style.setProperty('--selection-bg', randomColorHSLA);
 }
 
@@ -70,14 +65,14 @@ function goOpposite() {
 	}
 }
 
-//hideWhenTransparent();
+randomColor();
+fade();
+hide();
 
 showDarkModeText();
 media.addListener(() => {
 	showDarkModeText();
 });
-
-randomColor();
 
 window.onunload = function() {
 	window.scrollTo(0, 0);
@@ -85,8 +80,10 @@ window.onunload = function() {
 
 window.onscroll = function() {
 	fade();
+	hide();
 };
 
 window.onresize = function() {
 	fade();
+	hide();
 }
