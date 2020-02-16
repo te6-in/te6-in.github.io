@@ -252,7 +252,7 @@ body {
 }
 
 .main2 .contents .cards .cardbg:active {
-	box-shadow: 0 0.3em 0.4em rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.4);
 	transition: box-shadow 0.3s;
 }
 
@@ -260,20 +260,28 @@ body {
 	width: 2em;
 	height: 2em;
 	fill: var(--ctcardlogo);
-	transition: fill 0.3s, width 0.3s, height 0.3s;
+	transition: fill 0.3s, width 0.3s, height 0.3s, filter 0.3s;
 	z-index: 1;
 }
 
 .main2 .contents .cards .cardbg:hover .logo {
 	width: 2.25em;
 	height: 2.25em;
-	fill: #FFF;
+	fill: white;
 	filter: drop-shadow(0 0.25em 0.25em rgba(0, 0, 0, 0.25));
-	transition: fill 0.3s, width 0.3s, height 0.3s;
+	transition: fill 0.3s, width 0.3s, height 0.3s, filter 0.3s;
 }
 
 #behance .cardbg:hover {
 	background-color: #0056FF;
+}
+
+#behance .cardbg:hover .logo {
+	width: 2.25em;
+	height: 2.25em;
+	fill: white;
+	filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+	transition: fill 0.3s, width 0.3s, height 0.3s, filter 0.3s;
 }
 
 #instagram .instagrambg {
@@ -314,8 +322,8 @@ body {
 	width: 2.25em;
 	height: 2.25em;
 	fill: #0061EC;
-	filter: drop-shadow(0 0.25em 0.25em rgba(0, 0, 0, 0.1));
-	transition: fill 0.3s, width 0.3s, height 0.3s;
+	filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+	transition: fill 0.3s, width 0.3s, height 0.3s, filter 0.3s;
 }
 
 .main2 .contents .footer {

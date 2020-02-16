@@ -1,0 +1,189 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--bg);
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+::selection {
+	background: var(--neutralbg);
+}
+
+.nolb {
+	display: inline-block;
+}
+
+.linkwithoutul {
+	text-decoration: none;
+}
+
+.header {
+	position: fixed;
+	display: flex;
+	width: 100vw;
+	height: 8em;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+	align-items: center;
+	justify-content: center;
+}
+
+.header .container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.header .bg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(var(--bg), var(--tbg));
+	z-index: 3;
+}
+
+.header .container .title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+	font-size: 1.8em;
+	color: var(--neutral);
+	font-weight: 700;
+	position: relative;
+	z-index: 4;
+}
+
+.header .container .blank {
+	height: 2em;
+	z-index: 4;
+}
+
+.main {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.main .contents {
+	position: absolute;
+	display: flex;
+	width: 100vw;
+	left: 0;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	word-break: keep-all;
+}
+
+.main .contents .description {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: calc(1em + 0.5vw);
+	font-weight: 400;
+	color: var(--neutral);
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.main .contents .description .howtosub {
+	color: var(--subtext);
+	font-size: 80%;
+	margin-top: 2em;
+}
+
+.txtbtn {
+	color: var(--subtext);
+	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+.main .contents .cards {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3.5em;
+}
+
+.main .contents .cards .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 6em;
+}
+
+.main .contents .cards .card .cardbg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 6.4em;
+	height: 4em;
+	margin: 0.5em;
+	border-radius: 0.8em;
+	background-color: #FDD200;
+	box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s, width 0.3s, height 0.3s;
+}
+
+.main .contents .cards .cardbg:hover {
+	width: 7.2em;
+	height: 4.5em;
+	box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.3s, width 0.3s, height 0.3s;
+}
+
+.main .contents .cards .cardbg:active {
+	box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.3);
+	transition: box-shadow 0.3s;
+}
+
+.main .contents .cards .card .logo {
+	width: 2em;
+	height: 2em;
+	fill: #0061EC;
+	transition: width 0.3s, height 0.3s;
+}
+
+.main .contents .cards .cardbg:hover .logo {
+	width: 2.25em;
+	height: 2.25em;
+	transition: width 0.3s, height 0.3s;
+}
+
+.main .contents .cards .cardbg .txt {
+	font-family: 'Montserrat', sans-serif;
+	font-size: calc(1em + 0.5vw);
+	font-weight: 600;
+	color: #0061EC;
+	text-align: center;
+	margin-left: 0.4em;
+	transition: font-size 0.3s, margin-left 0.3s;
+}
+
+.main .contents .cards .cardbg:hover .txt {
+	font-size: calc(1.125em + 0.5625vw);
+	margin-left: 0.45em;
+	transition: font-size 0.3s, margin-left 0.3s;
+}
+
+@media screen and (max-width: 420px) {
+	.main .contents .description {
+		font-weight: 500;
+	}
+
+}
