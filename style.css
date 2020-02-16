@@ -306,6 +306,18 @@ body {
 	transition: opacity 0.3s;
 }
 
+#kakaomap .cardbg:hover {
+	background-color: #FDD200;
+}
+
+#kakaomap .cardbg:hover .logo {
+	width: 2.25em;
+	height: 2.25em;
+	fill: #0061EC;
+	filter: drop-shadow(0 0.25em 0.25em rgba(0, 0, 0, 0.1));
+	transition: fill 0.3s, width 0.3s, height 0.3s;
+}
+
 .main2 .contents .footer {
 	display: flex;
 	flex-direction: column;
