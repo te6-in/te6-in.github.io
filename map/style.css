@@ -63,21 +63,11 @@ body {
 	z-index: 4;
 }
 
-.main {
-	position: fixed;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100vw;
-	height: 80vh;
-	top: 10vh;;
-	left: 0;
-}
-
-.main .contents {
+.contents {
 	position: absolute;
 	display: flex;
 	width: 100vw;
+	height: 100vh;
 	left: 0;
 	flex-direction: column;
 	justify-content: center;
@@ -85,7 +75,7 @@ body {
 	word-break: keep-all;
 }
 
-.main .contents .description {
+.contents .description {
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: calc(1em + 0.5vw);
 	font-weight: 400;
@@ -94,7 +84,7 @@ body {
 	margin-bottom: 5vh;
 }
 
-.main .contents .description .legend {
+.contents .description .legend {
 	color: var(--subtext);
 	font-size: 80%;
 	margin-top: 3vh;
@@ -103,7 +93,7 @@ body {
 	align-items: center;
 }
 
-.main .legend .orange {
+.legend .orange {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -116,7 +106,7 @@ body {
 	margin-right: 0.6em;
 }
 
-.main .legend .pink {
+.legend .pink {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -127,14 +117,14 @@ body {
 	border-radius: 0.5em;
 }
 
-.main .legend .legendtxt {
+.legend .legendtxt {
 	font-weight: 500;
 	color: white;
 	filter: drop-shadow(0 0.1em 0.1em rgba(0, 0, 0, 0.2));
 	padding-bottom: 0.1em;
 }
 
-.main .contents .description .howtosub {
+.contents .description .howtosub {
 	color: var(--subtext);
 	font-size: 80%;
 	margin-top: 3vh;
@@ -147,14 +137,14 @@ body {
 	text-decoration: underline;
 }
 
-.main .contents .cards {
+.contents .cards {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 5vh;
 }
 
-.main .contents .cards .container {
+.contents .cards .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -163,7 +153,7 @@ body {
 	height: 6em;
 }
 
-.main .contents .cards .card .cardbg {
+.contents .cards .card .cardbg {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -176,32 +166,32 @@ body {
 	transition: box-shadow 0.3s, width 0.3s, height 0.3s;
 }
 
-.main .contents .cards .cardbg:hover {
+.contents .cards .cardbg:hover {
 	width: 7.2em;
 	height: 4.5em;
 	box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
 	transition: box-shadow 0.3s, width 0.3s, height 0.3s;
 }
 
-.main .contents .cards .cardbg:active {
+.contents .cards .cardbg:active {
 	box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.3);
 	transition: box-shadow 0.3s;
 }
 
-.main .contents .cards .card .logo {
+.contents .cards .card .logo {
 	width: 2em;
 	height: 2em;
 	fill: #0061EC;
 	transition: width 0.3s, height 0.3s;
 }
 
-.main .contents .cards .cardbg:hover .logo {
+.contents .cards .cardbg:hover .logo {
 	width: 2.25em;
 	height: 2.25em;
 	transition: width 0.3s, height 0.3s;
 }
 
-.main .contents .cards .cardbg .txt {
+.contents .cards .cardbg .txt {
 	width: 1em;
 	font-family: 'Montserrat', sans-serif;
 	font-size: calc(1em + 0.5vw);
@@ -212,7 +202,7 @@ body {
 	transition: font-size 0.3s, margin-left 0.3s;
 }
 
-.main .contents .cards .cardbg:hover .txt {
+.contents .cards .cardbg:hover .txt {
 	font-size: calc(1.125em + 0.5625vw);
 	margin-left: 0.45em;
 	transition: font-size 0.3s, margin-left 0.3s;
@@ -223,18 +213,18 @@ body {
 		display: inline-block;
 		width: 100vw;
 	}
-	.main .contents {
-		margin-top: 8vh;
-	}
-	.main .contents .description {
+
+	.contents .description {
 		font-weight: 500;
 	}
-	.main .contents .cards .card .cardbg {
+
+	.contents .cards .card .cardbg {
 		width: 5.8em;
 		height: 3.8em;
 		margin: 0.4em;
 	}
-	.main .contents .cards .cardbg:hover {
+
+	.contents .cards .cardbg:hover {
 		width: 6.525em;
 		height: 4.275em;
 	}
