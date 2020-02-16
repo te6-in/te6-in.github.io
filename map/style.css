@@ -101,6 +101,7 @@ body {
 	margin-top: 3vh;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 .main .legend .orange {
@@ -112,6 +113,7 @@ body {
 	background-color: rgba(239, 123, 48, 1);
 	border-radius: 0.5em;
 	box-shadow: 0 0.15em 0.3em rgba(239, 123, 48, 0.3);
+	margin-left: 0.6em;
 	margin-right: 0.6em;
 }
 
