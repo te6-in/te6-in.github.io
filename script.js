@@ -65,21 +65,33 @@ function goOpposite() {
 	}
 }
 
+function stickToBottom() {
+	if (getScrollPercent() > 0.9) {
+		document.body.scrollTop = document.body.scrollHeight;
+		document.documentElement.scrollTop = document.documentElement.scrollHeight;
+	}
+}
+
 randomColor();
 fade();
 hide();
 showDarkModeText();
+
 media.addListener(() => {
 	showDarkModeText();
 });
+
 window.onunload = function() {
 	window.scrollTo(0, 0);
 };
+
 window.onscroll = function() {
 	fade();
 	hide();
 };
+
 window.onresize = function() {
 	fade();
 	hide();
-}
+	stickToBottom();
+};

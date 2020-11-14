@@ -115,10 +115,6 @@ body {
 	text-align: center;
 }
 
-.main .contents .description .accent {
-	font-weight: 500;
-}
-
 .float {
 	position: relative;
 	display: flex;
@@ -150,7 +146,6 @@ body {
 	max-width: 44.8em;
 	height: 45vw;
 	max-height: 25.2em;
-	margin-bottom: 0.8em;
 	border-radius: 14px;
 	box-shadow: 0 0.2em 8px rgba(0, 0, 0, 0.3);
 	transition: box-shadow 0.3s;
@@ -172,6 +167,7 @@ body {
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 400;
 	text-align: center;
+	padding-top: 0.8em;
 }
 
 .main2 {
@@ -219,16 +215,10 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 3em;
-}
-
-.main2 .contents .cards .container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	flex-direction: row;
 	flex-wrap: wrap;
-	height: 6em;
+	height: 9em;
+	margin-bottom: 3em;
 }
 
 .main2 .contents .cards .card .cardbg {
@@ -357,14 +347,6 @@ body {
 		font-weight: 800;
 	}
 
-	.main .contents .description {
-		font-weight: 500;
-	}
-
-	.main .contents .description .accent {
-		font-weight: 700;
-	}
-
 	.float .cards .card {
 		margin-bottom: 4vh;
 	}
@@ -376,7 +358,7 @@ body {
 	}
 
 	.float .cards .card .cardname {
-		font-weight: 500;
+		font-weight: 400;
 		font-size: 4.6vw;
 	}
 
