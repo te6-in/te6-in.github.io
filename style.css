@@ -340,15 +340,6 @@ body {
 	align-items: center;
 }
 
-.main2 .contents .footer .copyright {
-	color: var(--subtext);
-	font-family: 'Noto Sans KR', sans-serif;
-	font-weight: 400;
-	text-align: center;
-	font-size: 1em;
-	margin-bottom: 0.6em;
-}
-
 .main2 .contents .footer .darktxt {
 	color: var(--subtext);
 	font-family: 'Noto Sans KR', sans-serif;
@@ -425,11 +416,6 @@ body {
 	.main2 .contents .cards .cardbg:hover .logo {
 		width: 2em;
 		height: 2em;
-	}
-
-	.main2 .contents .footer .copyright .crnolb {
-		display: inline-block;
-		width: 100vw;
 	}
 
 	#instagram .instagrambg {
