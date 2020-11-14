@@ -272,14 +272,20 @@ body {
 	transition: fill 0.3s, width 0.3s, height 0.3s, filter 0.3s;
 }
 
+#github .cardbg:hover {
+	background-color: var(--githubbg);
+}
+
+#github .cardbg:hover .logo {
+	fill: var(--githublogo);
+	filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+}
+
 #behance .cardbg:hover {
 	background-color: #0056FF;
 }
 
 #behance .cardbg:hover .logo {
-	width: 2.25em;
-	height: 2.25em;
-	fill: white;
 	filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
 	transition: fill 0.3s, width 0.3s, height 0.3s, filter 0.3s;
 }
@@ -301,6 +307,7 @@ body {
 
 #applemusic .applemusicbg {
 	position: absolute;
+	background-image: linear-gradient(180deg, #FB5C74 10%, #FA233B 100%);
 	width: inherit;
 	height: inherit;
 	border-radius: 0.8em;
