@@ -15,13 +15,17 @@ function getScrollPercent() {
 }
 
 function fade() {
-	if (getScrollPercent() < 0.25) {
-		document.getElementById("fadeout").style.opacity = 1 - (getScrollPercent() * 4);
+	scrollAmount = getScrollPercent();
+	if (scrollAmount < 0.25) {
+		document.getElementById("fadeout").style.opacity = 1 - (scrollAmount * 4);
 		document.getElementById("fadein").style.opacity = 0;
-	} else if (getScrollPercent() > 0.75) {
+	} else if (0.25 <= scrollAmount && scrollAmount <= 0.75) {
 		document.getElementById("fadeout").style.opacity = 0;
-		document.getElementById("fadein").style.opacity = (getScrollPercent() - 0.75) * 5;
-	} else if (getScrollPercent() > 0.9) {
+		document.getElementById("fadein").style.opacity = 0;
+	} else if (0.75 < scrollAmount && scrollAmount < 0.9) {
+		document.getElementById("fadeout").style.opacity = 0;
+		document.getElementById("fadein").style.opacity = (scrollAmount - 0.75) * 20 / 3;
+	} else if (0.9 <= scrollAmount) {
 		document.getElementById("fadeout").style.opacity = 0;
 		document.getElementById("fadein").style.opacity = 1;
 	}
