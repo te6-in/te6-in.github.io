@@ -269,6 +269,7 @@ body {
 	height: 2em;
 	fill: var(--ctcardlogo);
 	transition: fill 0.3s, width 0.3s, height 0.3s;
+	box-shadow: none !important;
 	z-index: 1;
 }
 
@@ -277,6 +278,7 @@ body {
 	height: 2.25em;
 	fill: white;
 	transition: fill 0.3s, width 0.3s, height 0.3s;
+	box-shadow: none !important;
 }
 
 #github .cardbg:hover {
