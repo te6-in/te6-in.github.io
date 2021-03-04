@@ -99,6 +99,7 @@ body {
 	color: var(--neutral);
 	margin-bottom: 1.1em;
 	text-align: center;
+	max-width: 80vw;
 }
 
 .main .contents .title .accent {
@@ -219,6 +220,22 @@ body {
 	flex-wrap: wrap;
 	height: 9em;
 	margin-bottom: 3em;
+	max-width: 80vw;
+}
+
+.main2 .contents .cards .row{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	max-width: 20em;
+}
+
+.main2 .contents .cards .card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 5em;
+	height: 5em;
 }
 
 .main2 .contents .cards .card .cardbg {
@@ -237,8 +254,9 @@ body {
 .main2 .contents .cards .cardbg:hover {
 	width: 4.5em;
 	height: 4.5em;
+	border-radius: 0.9em;
 	box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
-	transition: background-color 0.3s, box-shadow 0.3s, width 0.3s, height 0.3s;
+	transition: background-color 0.3s, box-shadow 0.3s, width 0.3s, height 0.3s, border-radius 0.3s;
 }
 
 .main2 .contents .cards .cardbg:active {
@@ -250,7 +268,7 @@ body {
 	width: 2em;
 	height: 2em;
 	fill: var(--ctcardlogo);
-	transition: fill 0.3s, width 0.3s, height 0.3s, filter 0.3s;
+	transition: fill 0.3s, width 0.3s, height 0.3s;
 	z-index: 1;
 }
 
@@ -268,16 +286,10 @@ body {
 
 #github .cardbg:hover .logo {
 	fill: var(--githublogo);
-	filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
 }
 
 #behance .cardbg:hover {
 	background-color: #0056FF;
-}
-
-#behance .cardbg:hover .logo {
-	filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-	transition: fill 0.3s, width 0.3s, height 0.3s, filter 0.3s;
 }
 
 #instagram .instagrambg {
@@ -293,6 +305,10 @@ body {
 #instagram .cardbg:hover .instagrambg {
 	opacity: 1;
 	transition: opacity 0.3s;
+}
+
+#reddit .cardbg:hover {
+	background-color: #FF4500;
 }
 
 #applemusic .applemusicbg {
@@ -347,6 +363,14 @@ body {
 		font-weight: 800;
 	}
 
+	.main .contents .description {
+		font-family: 'Noto Sans KR', sans-serif;
+		font-size: calc(1em + 0.5vw);
+		font-weight: 500;
+		color: var(--subtext);
+		text-align: center;
+	}
+
 	.float .cards .card {
 		margin-bottom: 4vh;
 	}
@@ -375,8 +399,9 @@ body {
 		margin-bottom: 2em;
 	}
 
-	.main2 .contents .cards .container {
-		height: 5em;
+	.main2 .contents .cards .card {
+		width: 4.5em;
+		height: 4.5em;
 	}
 
 	.main2 .contents .cards .card .cardbg {
@@ -388,6 +413,7 @@ body {
 	.main2 .contents .cards .cardbg:hover {
 		width: 4em;
 		height: 4em;
+		border-radius: 0.8em;
 	}
 
 	.main2 .contents .cards .card .logo {
