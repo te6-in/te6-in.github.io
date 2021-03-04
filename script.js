@@ -20,10 +20,10 @@ function fade() {
 		document.getElementById("fadein").style.opacity = 0;
 	} else if (getScrollPercent() > 0.75) {
 		document.getElementById("fadeout").style.opacity = 0;
-		document.getElementById("fadein").style.opacity = ((getScrollPercent()) - 0.75) * 4;
-	} else {
+		document.getElementById("fadein").style.opacity = (getScrollPercent() - 0.75) * 5;
+	} else if (getScrollPercent() > 0.9) {
 		document.getElementById("fadeout").style.opacity = 0;
-		document.getElementById("fadein").style.opacity = 0;
+		document.getElementById("fadein").style.opacity = 1;
 	}
 }
 
