@@ -6,6 +6,10 @@ window.isMobile = function() {
 	return check;
 };
 
+function isDarkMode() {
+	return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+}
+
 function getScrollPercent() {
 	var h = document.documentElement;
 	var b = document.body;
@@ -14,57 +18,53 @@ function getScrollPercent() {
 	return (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight);
 }
 
+function setRandomColor() {
+	var randomH = Math.floor(Math.random() * 360);
+	var randomColor = "hsl(x,54%,54%)".replace('x', randomH);
+	var randomColorHSLA = "hsla(x,54%,54%, 0.2)".replace('x', randomH);
+	document.getElementById("accent-color-title").style.color = randomColor;
+	document.getElementById("accent-color-description").style.color = randomColor;
+	document.documentElement.style.setProperty('--selection', randomColorHSLA);
+}
+
 function fade() {
 	scrollAmount = getScrollPercent();
 	if (scrollAmount < 0.25) {
-		document.getElementById("fadeout").style.opacity = 1 - (scrollAmount * 4);
-		document.getElementById("fadein").style.opacity = 0;
+		document.getElementById("main1").style.opacity = 1 - (scrollAmount * 4);
+		document.getElementById("main2").style.opacity = 0;
 	} else if (0.25 <= scrollAmount && scrollAmount <= 0.75) {
-		document.getElementById("fadeout").style.opacity = 0;
-		document.getElementById("fadein").style.opacity = 0;
+		document.getElementById("main1").style.opacity = 0;
+		document.getElementById("main2").style.opacity = 0;
 	} else if (0.75 < scrollAmount && scrollAmount < 0.95) {
-		document.getElementById("fadeout").style.opacity = 0;
-		document.getElementById("fadein").style.opacity = (scrollAmount - 0.75) * 5;
+		document.getElementById("main1").style.opacity = 0;
+		document.getElementById("main2").style.opacity = (scrollAmount - 0.75) * 5;
 	} else if (0.95 <= scrollAmount) {
-		document.getElementById("fadeout").style.opacity = 0;
-		document.getElementById("fadein").style.opacity = 1;
+		document.getElementById("main1").style.opacity = 0;
+		document.getElementById("main2").style.opacity = 1;
 	}
 }
 
 function hide() {
-	if (document.getElementById("fadeout").style.opacity > 0) {
-		document.getElementById("fadeout").className = "main";
+	if (document.getElementById("main1").style.opacity > 0) {
+		document.getElementById("main1").className = "full fixed-background flex-one-item";
 	} else {
-		document.getElementById("fadeout").className = "screen-readable";
+		document.getElementById("main1").className = "full fixed-background flex-one-item screen-readable";
 	}
 
-	if (document.getElementById("fadein").style.opacity > 0) {
-		document.getElementById("fadein").className = "main2";
+	if (document.getElementById("main2").style.opacity > 0) {
+		document.getElementById("main2").className = "full fixed-background flex-vertical";
 	} else {
-		document.getElementById("fadein").className = "main2 screen-readable"; //due to transition animation issues
+		document.getElementById("main2").className = "full fixed-background flex-vertical screen-readable"; //due to transition animation issues
 	}
-}
-
-function randomColor() {
-	var randomH = Math.floor(Math.random() * 360);
-	var randomColor = "hsl(x,54%,54%)".replace('x', randomH);
-	var randomColorHSLA = "hsla(x,54%,54%, 0.2)".replace('x', randomH);
-	document.getElementById("randomColor1").style.color = randomColor;
-	document.getElementById("randomColor2").style.color = randomColor;
-	document.documentElement.style.setProperty('--selection-bg', randomColorHSLA);
-}
-
-function isDarkMode() {
-	return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
 }
 
 function showDarkModeText() {
 	if (isDarkMode() == 1) {
-		document.getElementById("darktxt").innerHTML = "다크 모드 🌙";
-		document.getElementById("darktxt").style.userSelect = "auto";
+		document.getElementById("dark-mode").innerHTML = "다크 모드 🌙";
+		document.getElementById("dark-mode").style.userSelect = "auto";
 	} else {
-		document.getElementById("darktxt").innerHTML = "　";
-		document.getElementById("darktxt").style.userSelect = "none";
+		document.getElementById("dark-mode").innerHTML = "　";
+		document.getElementById("dark-mode").style.userSelect = "none";
 	}
 }
 
@@ -85,7 +85,7 @@ function stickToBottom() {
 	}
 }
 
-randomColor();
+setRandomColor();
 fade();
 hide();
 showDarkModeText();

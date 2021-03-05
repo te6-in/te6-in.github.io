@@ -3,18 +3,10 @@ html {
 }
 
 body {
-	background-color: var(--bg);
+	background-color: var(--background);
 	margin: 0;
 	overflow-x: hidden;
 	overflow-y: auto;
-}
-
-:root {
-	--selection-bg: none;
-}
-
-::selection {
-	background: var(--selection-bg);
 }
 
 .screen-readable:not(:focus):not(:active) {
@@ -27,44 +19,82 @@ body {
 	width: 1px;
 }
 
-.nolb {
-	display: inline-block;
+::selection {
+	background: var(--selection);
 }
 
-.linkwithoutul {
+.full {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.fixed-background {
+	position: fixed;
+	z-index: 0;
+}
+
+.flex-one-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-horizontal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.flex-vertical {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.plain-list {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+.plain-link {
 	text-decoration: none;
+}
+
+.keep-all {
+	word-break: keep-all;
+}
+
+.restrict-width {
+	max-width: 80vw;
 }
 
 .header {
 	position: fixed;
-	display: flex;
 	width: 100vw;
 	height: 8em;
 	top: 0px;
 	left: 0px;
 	z-index: 2;
-	align-items: center;
-	justify-content: center;
 }
 
-.header .container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.header .bg {
+.header-gradient {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(var(--bg), var(--tbg));
+	background: linear-gradient(var(--background), var(--background-gradient));
 	z-index: 3;
 }
 
-.header .container .title {
+.header .title {
 	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
 	font-size: 1.8em;
 	color: var(--neutral);
@@ -73,104 +103,61 @@ body {
 	z-index: 4;
 }
 
-.header .container .blank {
+.header .blank {
 	height: 2em;
 	z-index: 4;
 }
 
-.main {
-	position: fixed;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	z-index: 0;
+#main1 .fix-margin {
+	margin-bottom: 13vh;
 }
 
-.main .contents {
-	position: absolute;
-	display: flex;
-	width: 100vw;
-	left: 0;
-	padding-bottom: 13vh;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	word-break: keep-all;
-}
-
-.main .contents .title {
+#main1 .title {
 	font-family: 'Nunito', 'Noto Sans KR', sans-serif;
 	font-size: calc(1.6em + 1.3vw);
 	font-weight: 400;
 	color: var(--neutral);
 	margin-bottom: 1.1em;
 	text-align: center;
-	max-width: 80vw;
 }
 
-.main .contents .title .accent {
+#main1 .title .accent {
 	font-weight: 700;
 	font-style: italic;
 	text-decoration: underline;
 }
 
-.main .contents .description {
+#main1 .description {
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: calc(1em + 0.5vw);
 	font-weight: 400;
-	color: var(--subtext);
+	color: var(--secondary);
 	text-align: center;
 }
 
 .float {
 	position: relative;
-	display: flex;
 	width: 100vw;
 	margin-top: 80vh;
 	margin-bottom: 84vh;
 	z-index: 1;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
 }
 
-.float .cards {
-	display: flex;
-	position: relative;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	z-index: 0;
-}
-
-.float .cards .card {
+.float .card {
 	margin: 0.5em 0.5em 3.4em 0.5em;
 }
 
-.float .cards .card .cardbg {
-	display: flex;
+.float .card-background {
 	width: 80vw;
-	max-width: 44.8em;
 	height: 45vw;
+	max-width: 44.8em;
 	max-height: 25.2em;
 	border-radius: 14px;
 	box-shadow: 0 0.2em 8px rgba(0, 0, 0, 0.3);
-	transition: box-shadow 0.3s;
+	transition: box-shadow var(--animation-time);
 }
 
-.float .cards .card:hover .cardbg {
-	box-shadow: 0 0.5em 18px rgba(0, 0, 0, 0.4);
-}
-
-.float .cards .card:active .cardbg {
-	box-shadow: 0 0.3em 12px rgba(0, 0, 0, 0.4);
-}
-
-.float .cards .card .cardname {
+.float .card-name {
 	color: var(--neutral);
 	font-size: 1.4em;
 	font-family: 'Noto Sans KR', sans-serif;
@@ -179,258 +166,178 @@ body {
 	padding-top: 0.8em;
 }
 
-.main2 {
-	position: fixed;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	z-index: 0;
-}
-
-.main2 .contents {
-	position: absolute;
-	display: flex;
-	width: 100vw;
-	left: 0;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.main2 .contents .title {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-bottom: 1.5em;
-}
-
-.main2 .contents .title .memoji {
+#main2 .memoji {
 	width: 12em;
 	height: 12em;
-}
-
-.main2 .contents .title .memoji .image {
-	width: 100%;
-	height: 100%;
+	margin-bottom: 1.5em;
 	filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.14));
 }
 
-.main2 .contents .cards {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-	flex-wrap: wrap;
-	height: 9em;
+#main2 .fix-margin {
 	margin-bottom: 3em;
-	max-width: 80vw;
 }
 
-.main2 .contents .cards .row{
+#main2 .restrict-item-amount {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	max-width: 20em;
 }
 
-.main2 .contents .cards .card {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+#main2 .button {
 	width: 5em;
 	height: 5em;
 }
 
-.main2 .contents .cards .card .cardbg {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+#main2 .button-background {
 	width: 4em;
 	height: 4em;
 	margin: 0.5em;
 	border-radius: 0.8em;
-	background-color: var(--ctcardbg);
+	background-color: var(--button-background);
 	box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.1);
-	transition: width 0.3s, height 0.3s, border-radius 0.3s, box-shadow 0.3s;
+	transition: width var(--animation-time), height var(--animation-time), border-radius var(--animation-time), box-shadow var(--animation-time);
 }
 
-.main2 .contents .cards .cardbg:hover {
-	width: 4.5em;
-	height: 4.5em;
-	border-radius: 0.9em;
-	box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+#main2 .button-custom-background {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	z-index: 0;
+	border-radius: 0.8em;
+	opacity: 0;
+	transition: opacity var(--animation-time), border-radius var(--animation-time);
 }
 
-.main2 .contents .cards .cardbg:active {
-	box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.4);
-}
-
-.main2 .contents .cards .card .logo {
+#main2 .button .logo {
 	width: 2em;
 	height: 2em;
-	fill: var(--ctcardlogo);
-	box-shadow: none !important;
 	z-index: 1;
-	transition: width 0.3s, height 0.3s, fill 0.3s;
+	fill: var(--button-logo);
+	transition: width var(--animation-time), height var(--animation-time), fill var(--animation-time);
 }
 
-.main2 .contents .cards .cardbg:hover .logo {
-	width: 2.25em;
-	height: 2.25em;
-	fill: white;
-	box-shadow: none !important;
-}
-
-#github .cardbg:hover {
-	background-color: var(--githubbg);
-}
-
-#github .cardbg:hover .logo {
-	fill: var(--githublogo);
-}
-
-#behance .cardbg:hover {
-	background-color: #0056FF;
-}
-
-#instagram .instagrambg {
-	position: absolute;
-	width: inherit;
-	height: inherit;
-	border-radius: 0.8em;
-	z-index: 0;
-	opacity: 0;
-	transition: opacity 0.3s;
-}
-
-#instagram .cardbg:hover .instagrambg {
-	opacity: 1;
-}
-
-#reddit .cardbg:hover {
-	background-color: #FF4500;
-}
-
-#applemusic .applemusicbg {
-	position: absolute;
+#applemusic .button-custom-background {
 	background-image: linear-gradient(180deg, #FB5C74 10%, #FA233B 100%);
-	width: inherit;
-	height: inherit;
-	border-radius: 0.8em;
-	z-index: 0;
-	opacity: 0;
 }
 
-#applemusic .cardbg:hover .applemusicbg {
-	opacity: 1;
-	transition: opacity 0.3s;
-}
-
-#kakaomap .cardbg:hover {
-	background-color: #FDD200;
-}
-
-#kakaomap .cardbg:hover .logo {
-	fill: #0061EC;
-}
-
-.main2 .contents .footer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.main2 .contents .footer .darktxt {
-	color: var(--subtext);
+#main2 #dark-mode {
+	color: var(--secondary);
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 400;
 	text-align: center;
 	font-size: 0.8em;
 }
 
+@media (hover: hover) and (pointer: fine) {
+	.float .card:hover .card-background {
+		box-shadow: 0 0.5em 18px rgba(0, 0, 0, 0.4);
+	}
+	
+	.float .card:active .card-background {
+		box-shadow: 0 0.3em 12px rgba(0, 0, 0, 0.4);
+	}
+
+	#main2 .button-background:hover {
+		width: 4.5em;
+		height: 4.5em;
+		border-radius: 0.9em;
+		box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+	}
+
+	#main2 .button-background:active {
+		box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.4);
+	}
+
+	#main2 .button-background:hover .button-custom-background {
+		border-radius: 0.9em;
+		opacity: 1;
+	}
+
+	#main2 .button-background:hover .logo {
+		width: 2.25em;
+		height: 2.25em;
+		fill: white;
+	}
+
+	#github .button-background:hover {
+		background-color: var(--github-background);
+	}
+
+	#github .button-background:hover .logo {
+		fill: var(--github-logo);
+	}
+
+	#behance .button-background:hover {
+		background-color: #0056FF;
+	}
+
+	#reddit .button-background:hover {
+		background-color: #FF4500;
+	}
+
+	#kakaomap .button-background:hover {
+		background-color: #FDD200;
+	}
+
+	#kakaomap .button-background:hover .logo {
+		fill: #0061EC;
+	}
+}
+
 @media screen and (max-width: 420px) {
-	.main .contents .title {
+	#main1 .title {
 		font-weight: 600;
 	}
 
-	.main .contents .title .accent {
+	#main1 .title .accent {
 		font-weight: 800;
 	}
 
-	.main .contents .description {
-		font-family: 'Noto Sans KR', sans-serif;
-		font-size: calc(1em + 0.5vw);
+	#main1 .description {
 		font-weight: 500;
-		color: var(--subtext);
-		text-align: center;
 	}
 
-	.float .cards .card {
+	.float .card {
 		margin-bottom: 4vh;
 	}
 
-	.float .cards .card .cardbg {
-		border-radius: 10px;
+	.float .card-background {
 		width: 88vw;
 		height: 49.5vw;
+		border-radius: 10px;
 	}
 
-	.float .cards .card .cardname {
-		font-weight: 400;
+	.float .card-name {
 		font-size: 4.6vw;
 	}
 
-	.main2 .contents .title {
-		margin-bottom: 0.8em;
-	}
-
-	.main2 .contents .title .memoji {
+	#main2 .memoji {
 		width: 10em;
 		height: 10em;
 	}
 
-	.main2 .contents .cards {
+	#main2 .button-container {
 		margin-bottom: 2em;
 	}
 
-	.main2 .contents .cards .card {
+	#main2 .button {
 		width: 4.5em;
 		height: 4.5em;
 	}
 
-	.main2 .contents .cards .card .cardbg {
+	#main2 .button-background {
 		width: 3.5em;
 		height: 3.5em;
 		border-radius: 0.7em;
 	}
 
-	.main2 .contents .cards .cardbg:hover {
-		width: 4em;
-		height: 4em;
-		border-radius: 0.8em;
+	#main2 .button-custom-background {
+		border-radius: 0.7em;
 	}
 
-	.main2 .contents .cards .card .logo {
+	#main2 .button .logo {
 		width: 1.75em;
 		height: 1.75em;
-	}
-
-	.main2 .contents .cards .cardbg:hover .logo {
-		width: 2em;
-		height: 2em;
-	}
-
-	#instagram .instagrambg {
-		border-radius: 0.7em;
-	}
-
-	#applemusic .applemusicbg {
-		border-radius: 0.7em;
 	}
 }
