@@ -60,9 +60,11 @@ function isDarkMode() {
 
 function showDarkModeText() {
 	if (isDarkMode() == 1) {
-		document.getElementById("darktxt").innerHTML += "다크 모드 🌙　";
+		document.getElementById("darktxt").innerHTML = "다크 모드 🌙";
+		document.getElementById("darktxt").style.userSelect = "auto";
 	} else {
 		document.getElementById("darktxt").innerHTML = "　";
+		document.getElementById("darktxt").style.userSelect = "none";
 	}
 }
 
