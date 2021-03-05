@@ -17,6 +17,16 @@ body {
 	background: var(--selection-bg);
 }
 
+.screen-readable:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
 .nolb {
 	display: inline-block;
 }
@@ -154,12 +164,10 @@ body {
 
 .float .cards .card:hover .cardbg {
 	box-shadow: 0 0.5em 18px rgba(0, 0, 0, 0.4);
-	transition: box-shadow 0.3s;
 }
 
 .float .cards .card:active .cardbg {
 	box-shadow: 0 0.3em 12px rgba(0, 0, 0, 0.4);
-	transition: box-shadow 0.3s;
 }
 
 .float .cards .card .cardname {
@@ -248,7 +256,7 @@ body {
 	border-radius: 0.8em;
 	background-color: var(--ctcardbg);
 	box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.1);
-	transition: background-color 0.3s, box-shadow 0.3s, width 0.3s, height 0.3s;
+	transition: width 0.3s, height 0.3s, border-radius 0.3s, box-shadow 0.3s;
 }
 
 .main2 .contents .cards .cardbg:hover {
@@ -256,28 +264,25 @@ body {
 	height: 4.5em;
 	border-radius: 0.9em;
 	box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
-	transition: background-color 0.3s, box-shadow 0.3s, width 0.3s, height 0.3s, border-radius 0.3s;
 }
 
 .main2 .contents .cards .cardbg:active {
 	box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.4);
-	transition: box-shadow 0.3s;
 }
 
 .main2 .contents .cards .card .logo {
 	width: 2em;
 	height: 2em;
 	fill: var(--ctcardlogo);
-	transition: fill 0.3s, width 0.3s, height 0.3s;
 	box-shadow: none !important;
 	z-index: 1;
+	transition: width 0.3s, height 0.3s, fill 0.3s;
 }
 
 .main2 .contents .cards .cardbg:hover .logo {
 	width: 2.25em;
 	height: 2.25em;
 	fill: white;
-	transition: fill 0.3s, width 0.3s, height 0.3s;
 	box-shadow: none !important;
 }
 
@@ -305,7 +310,6 @@ body {
 
 #instagram .cardbg:hover .instagrambg {
 	opacity: 1;
-	transition: opacity 0.3s;
 }
 
 #reddit .cardbg:hover {
@@ -320,7 +324,6 @@ body {
 	border-radius: 0.8em;
 	z-index: 0;
 	opacity: 0;
-	transition: opacity 0.3s;
 }
 
 #applemusic .cardbg:hover .applemusicbg {
@@ -333,10 +336,7 @@ body {
 }
 
 #kakaomap .cardbg:hover .logo {
-	width: 2.25em;
-	height: 2.25em;
 	fill: #0061EC;
-	transition: fill 0.3s, width 0.3s, height 0.3s;
 }
 
 .main2 .contents .footer {
