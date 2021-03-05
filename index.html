@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>🦈 te6.in</title>
+	<title>te6.in</title>
 	<link href="colors-light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)" rel="stylesheet">
 	<link href="colors-dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
@@ -17,37 +17,37 @@
 <body>
 	<header class="header">
 		<div class="container">
-			<h1 class="title" onclick="goOpposite()" style="cursor: pointer;">
+			<div class="title" onclick="goOpposite()" aria-label="페이지의 맨 위로 올라가기" style="cursor: pointer;">
 				te6.in
-			</h1>
+			</div>
 			<div class="blank"></div>
 		</div>
 		<div class="bg"></div>
 	</header>
 	<section class="main" id="fadeout">
 		<div class="contents">
-			<div class="title">
+			<span class="title" role="text">
 				Better experience<br>
 				– from <span class="accent" id="randomColor1">delicate</span> consideration
-			</div>
-			<div class="description">
+			</span>
+			<span class="description" role="text">
 				UX 설계와 프로그래밍을 공부하는<br>
 				<span id="randomColor2">주찬휘</span>입니다.
-			</div>
+			</span>
 		</div>
 	</section>
 	<section class="float">
 		<ul class="cards" style="list-style-type: none; padding-left: 0;">
 			<li class="card">
-				<a class="linkwithoutul" href="https://github.com/te6-in/MaterialFox-BigSur" target="_blank" rel="noopener noreferrer">
-					<img class="cardbg" src="images/projectthumbnails/MaterialFox-BigSur.png">
+				<a class="linkwithoutul" href="https://github.com/te6-in/MaterialFox-BigSur" target="_blank" rel="noopener noreferrer" aria-label="MaterialFox-BigSur 프로젝트 GitHub에서 열기">
+					<img class="cardbg" src="images/projectthumbnails/MaterialFox-BigSur.png" alt="MaterialFox-BigSur 테마를 적용한 Firefox의 스크린샷">
 					<div class="cardname">
 						MaterialFox-BigSur
 					</div></a>
 			</li>
 			<li class="card">
-				<a class="linkwithoutul" href="https://github.com/te6-in/ColorPicker" target="_blank" rel="noopener noreferrer">
-					<img class="cardbg" src="images/projectthumbnails/colorpicker_2.png">
+				<a class="linkwithoutul" href="https://github.com/te6-in/ColorPicker" target="_blank" rel="noopener noreferrer" aria-label="ColorPicker 2 프로젝트 GitHub에서 열기">
+					<img class="cardbg" src="images/projectthumbnails/colorpicker_2.png" alt="ColorPicker 2의 스크린샷">
 					<div class="cardname">
 						ColorPicker 2
 					</div>
@@ -55,17 +55,17 @@
 			</li>
 			<li class="card">
 				<a class="linkwithoutul">
-					<img class="cardbg" src="images/projectthumbnails/kakaomap_redesign.png">
+					<img class="cardbg" src="images/projectthumbnails/kakaomap_redesign.png" alt="리디자인된 카카오맵 화면을 표시하고 있는 두 대의 휴대전화">
 					<div class="cardname">
 						카카오맵 리디자인 <sup>WIP</sup>
 					</div>
 				</a>
 			</li>
 			<li class="card" style="margin-bottom: 0.5em;">
-				<a class="linkwithoutul" href="https://www.behance.net/gallery/21718793/EarPopup" target="_blank" rel="noopener noreferrer">
-					<img class="cardbg" src="images/projectthumbnails/earpopup.png">
+				<a class="linkwithoutul" href="https://www.behance.net/gallery/21718793/EarPopup" target="_blank" rel="noopener noreferrer" aria-label="EarPopup 프로젝트 Behance에서 열기">
+					<img class="cardbg" src="images/projectthumbnails/earpopup.png" alt="EarPopup 앱 아이콘과 EarPopup이라는 텍스트로 이루어진 배너">
 					<div class="cardname">
-						Earpopup
+						EarPopup
 					</div>
 				</a>
 			</li>
@@ -74,13 +74,13 @@
 	<footer class="main2" id="fadein">
 		<div class="contents">
 			<div class="title">
-				<div class="memoji"><img class="image" src="images/assets/memoji.png"></div>
+				<div class="memoji"><img class="image" src="images/assets/memoji.png" alt="한 쪽 눈을 윙크하고 있는 사람의 미모티콘"></div>
 			</div>
 			<address>
 				<ul class="cards" style="list-style-type: none; padding-left: 0;">
 					<div class="row">
 						<li class="card" id="github">
-							<a href="https://github.com/te6-in" target="_blank" rel="noopener noreferrer">
+							<a href="https://github.com/te6-in" target="_blank" rel="noopener noreferrer" aria-label="GitHub 프로필 열기">
 								<div class="cardbg">
 									<svg class="logo" width="32" height="32" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 										<path d="M16 0C7.2 0 0 7.3 0 16.4 0 23.7 4.6 29.8 10.9 32 11.7 32.1 12 31.6 12 31.2 12 30.8 12 29.8 12 28.4 7.6 29.4 6.6 26.2 6.6 26.2 5.9 24.3 4.8 23.8 4.8 23.8 3.4 22.8 5 22.8 5 22.8 6.6 22.9 7.4 24.5 7.4 24.5 8.8 27 11.2 26.3 12.1 25.8 12.2 24.8 12.6 24.1 13.1 23.7 9.5 23.2 5.8 21.8 5.8 15.5 5.8 13.8 6.4 12.3 7.4 11.1 7.3 10.7 6.7 9.1 7.6 6.8 7.6 6.8 8.9 6.4 12 8.5 13.3 8.1 14.6 7.9 16 7.9 17.4 7.9 18.7 8.1 20 8.5 23.1 6.4 24.4 6.8 24.4 6.8 25.3 9.1 24.7 10.7 24.6 11.1 25.6 12.3 26.2 13.8 26.2 15.5 26.2 21.8 22.5 23.2 18.9 23.6 19.5 24.1 20 25.1 20 26.7 20 28.9 20 30.6 20 31.2 20 31.6 20.3 32.1 21.1 32 27.4 29.8 32 23.7 32 16.4 32 7.3 24.8 0 16 0" />
@@ -89,7 +89,7 @@
 							</a>
 						</li>
 						<li class="card" id="behance">
-							<a href="https://www.behance.net/te_6" target="_blank" rel="noopener noreferrer">
+							<a href="https://www.behance.net/te_6" target="_blank" rel="noopener noreferrer" aria-label="Behance 프로필 열기">
 								<div class="cardbg">
 									<svg class="logo" height="50" viewbox="0 0 80 50" width="80" xmlns="http://www.w3.org/2000/svg">
 										<path d="M390.651411,84.5386708 C393.665421,84.5386708 396.305716,85.1164039 398.568558,86.2960975 C400.823927,87.4571546 402.671947,89.031943 404.125697,91.00369 C405.577579,92.9735734 406.6109,95.2248686 407.257427,97.7482575 C407.896479,100.269783 408.122576,102.903127 407.937588,105.661337 L382.226012,105.661337 C382.226012,108.469865 383.178985,111.1293 384.649552,112.55686 C386.114514,113.98442 388.233477,114.703791 390.978412,114.703791 C392.951626,114.703791 394.657633,114.206195 396.088961,113.212867 C397.507209,112.223266 398.37049,111.162846 398.704964,110.06329 L407.322827,110.06329 C405.938214,114.340378 403.836068,117.394908 400.967807,119.232472 C398.135049,121.079354 394.678188,122 390.651411,122 C387.844813,122 385.318502,121.545268 383.051922,120.654441 C380.785342,119.750568 378.890608,118.483283 377.296714,116.832085 C375.743929,115.173432 374.538699,113.212867 373.679155,110.911253 C372.828954,108.620821 372.399182,106.084386 372.399182,103.335495 C372.399182,100.677923 372.845771,98.1955347 373.714658,95.9013754 C374.604099,93.5997615 375.831752,91.6131052 377.4462,89.9469977 C379.066254,88.2715718 380.985279,86.9502404 383.220093,85.9848671 C385.456776,85.0213575 387.921425,84.5386708 390.651411,84.5386708 Z M351.200212,72 C353.552747,72 355.677315,72.2031384 357.618763,72.6224608 C359.549,73.0306012 361.197082,73.7126989 362.58917,74.6482538 C363.960703,75.5819449 365.033264,76.8250028 365.801248,78.390473 C366.550546,79.9335793 366.927998,81.8643259 366.927998,84.1491669 C366.927998,86.6203735 366.365557,88.6834396 365.240676,90.3327742 C364.10832,91.9802453 362.443421,93.3313951 360.219818,94.3806329 C363.248776,95.2490961 365.491065,96.7791569 366.97845,98.9521786 C368.473309,101.14011 369.203921,103.760409 369.203921,106.829848 C369.203921,109.319691 368.725566,111.461031 367.772594,113.263185 C366.808409,115.087704 365.496671,116.567446 363.880354,117.708003 C362.250958,118.859741 360.378647,119.703977 358.282107,120.253755 C356.20799,120.803533 354.055393,121.079354 351.850476,121.079354 L328,121.079354 L328,72 L351.200212,72 Z M350.61348,99.2056357 L338.833991,99.2056357 L338.833991,112.720862 L350.396726,112.720862 C351.46555,112.720862 352.480185,112.625815 353.435027,112.413359 C354.402948,112.200902 355.262492,111.867308 355.987499,111.371576 C356.712505,110.896344 357.312317,110.244064 357.749564,109.412874 C358.18681,108.591002 358.39609,107.523128 358.39609,106.231615 C358.39609,103.702635 357.682295,101.906072 356.264047,100.815834 C354.842063,99.7405047 352.94546,99.2056357 350.61348,99.2056357 Z M390.358045,91.9075627 C388.794049,91.9075627 387.499127,92.1703381 386.463937,92.7052071 C385.45117,93.2326214 384.619655,93.8904916 383.986208,94.6639085 C383.354631,95.4503709 382.92299,96.2796973 382.672601,97.1667971 C382.422212,98.031533 382.272726,98.8161318 382.226012,99.5094115 L398.149998,99.5094115 C397.916426,97.0195684 397.062488,95.1801409 395.894629,93.8867643 C394.730508,92.602706 392.761031,91.9075627 390.358045,91.9075627 Z M348.971004,80.3603563 L338.833991,80.3603563 L338.833991,91.8292892 L349.798782,91.8292892 C351.717807,91.8292892 353.306095,91.3745574 354.565514,90.4520482 C355.811853,89.5463118 356.41727,88.0460696 356.41727,85.9885944 C356.41727,84.8480376 356.215465,83.9031645 355.811853,83.1707481 C355.395161,82.4383317 354.842063,81.8643259 354.143216,81.4636401 C353.449975,81.0461814 352.667043,80.7573148 351.757047,80.6026315 C350.865738,80.4274479 349.929582,80.3603563 348.971004,80.3603563 Z M400.171795,75.2930784 L400.171795,80.1367177 L380.224769,80.1367177 L380.224769,75.2930784 L400.171795,75.2930784 Z" fill-rule="evenodd" transform="translate(-328 -72)" />
@@ -98,7 +98,7 @@
 							</a>
 						</li>
 						<li class="card" id="instagram">
-							<a href="https://www.instagram.com/te6.in/" target="_blank" rel="noopener noreferrer">
+							<a href="https://www.instagram.com/te6.in/" target="_blank" rel="noopener noreferrer" aria-label="Instagram 프로필 열기">
 								<div class="cardbg">
 									<img class="instagrambg" src="images/assets/bg_instagram.png">
 									<svg class="logo" height="72" viewbox="0 0 72 72" width="72" xmlns="http://www.w3.org/2000/svg">
@@ -110,7 +110,7 @@
 					</div>
 					<div class="row">
 						<li class="card" id="reddit">
-							<a href="https://www.reddit.com/user/j_ooch" target="_blank" rel="noopener noreferrer">
+							<a href="https://www.reddit.com/user/j_ooch" target="_blank" rel="noopener noreferrer" aria-label="Reddit 프로필 열기">
 								<div class="cardbg">
 									<svg class="logo" height="72" viewbox="0 0 90 81" xmlns="http://www.w3.org/2000/svg">
 										<path d="M90 41C90 37.1 87.6 33.6 84 32 80.4 30.5 76.3 31.3 73.4 34 66.8 29.2 57.6 26.1 47.3 25.7L51.8 4.8 66.3 7.9C66.5 11.4 69.2 14.2 72.8 14.5 76.3 14.8 79.4 12.4 80.2 9 80.9 5.5 78.9 2.1 75.6 0.9 72.3-0.2 68.6 1.3 67 4.5L50.8 1C50.4 0.9 49.9 1 49.5 1.2 49.1 1.5 48.8 1.9 48.7 2.3L43.7 25.7C33.4 26 24 29.1 17.3 34 14.4 31.4 10.3 30.7 6.8 32.2 3.2 33.7 0.9 37.1 0.9 41 0.8 44.8 3 48.4 6.5 50 6.3 51 6.3 52 6.3 53 6.3 68 23.8 80.2 45.3 80.2 66.9 80.2 84.4 68 84.4 53 84.4 52 84.4 51 84.2 50.1 87.8 48.5 90.1 44.9 90 41ZM23 48C23 44.1 26.1 41 30 41 33.9 41 37 44.1 37 48 37 51.9 33.9 55 30 55 26.1 55 23 51.9 23 48L23 48ZM62 66.4C57.2 71.2 48.1 71.6 45.4 71.6 42.7 71.6 33.6 71.2 28.8 66.4 28.1 65.7 28.1 64.6 28.8 63.9 29.6 63.2 30.7 63.2 31.4 63.9 34.4 66.9 40.8 67.9 45.4 67.9 50 67.9 56.4 66.9 59.4 63.9 60.1 63.2 61.3 63.1 62 63.9 62.7 64.6 62.7 65.7 62 66.4L62 66.4ZM60.7 55C56.9 55 53.7 51.9 53.7 48 53.7 44.1 56.9 41 60.7 41 64.6 41 67.7 44.1 67.7 48 67.7 49.9 67 51.6 65.7 52.9 64.4 54.3 62.6 55 60.7 55L60.7 55Z"/>
@@ -119,7 +119,7 @@
 							</a>
 						</li>
 						<li class="card" id="applemusic">
-							<a href="https://music.apple.com/profile/_0" target="_blank" rel="noopener noreferrer">
+							<a href="https://music.apple.com/profile/_0" target="_blank" rel="noopener noreferrer" aria-label="Apple Music 프로필 열기">
 								<div class="cardbg">
 									<div class="applemusicbg">
 									</div>
@@ -130,7 +130,7 @@
 							</a>
 						</li>
 						<li class="card" id="kakaomap">
-							<a href="/maps">
+							<a href="/maps" aria-label="te6.in 맛집 아카이브 열기">
 								<div class="cardbg">
 									<svg xmlns="http://www.w3.org/2000/svg" class="logo" width="14" height="20" viewbox="0 0 14 20">
 										<path d="M54,37 C50.13,37 47,40.13 47,44 C47,48.1044908 51.1329013,53.737449 53,56 C53.5210826,56.6314481 54.5175657,56.5818322 55,56 C56.8294147,53.7936637 61,48.1544353 61,44 C61,40.13 57.87,37 54,37 Z M54,46.5 C52.62,46.5 51.5,45.38 51.5,44 C51.5,42.62 52.62,41.5 54,41.5 C55.38,41.5 56.5,42.62 56.5,44 C56.5,45.38 55.38,46.5 54,46.5 Z" transform="translate(-47 -37)" />
@@ -141,7 +141,7 @@
 					</div>
 				</ul>
 			</address>
-			<div class="footer">
+			<div class="footer" aria-hidden="true">
 				<span class="darktxt" id="darktxt">　</span>
 			</div>
 		</div>

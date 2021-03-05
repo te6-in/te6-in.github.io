@@ -105,6 +105,11 @@ body {
 
 .contents .cards .card {
 	margin: 0.5em 0.5em 1.4em 0.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 5em;
+	height: 5em;
 }
 
 .contents .cards .card .cardbg {
