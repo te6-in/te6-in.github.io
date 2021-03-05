@@ -19,6 +19,10 @@ body {
 	width: 1px;
 }
 
+.preload * {
+	transition: none !important;
+}
+
 ::selection {
 	background: var(--selection);
 }

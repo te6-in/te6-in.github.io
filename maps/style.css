@@ -3,53 +3,82 @@ html {
 }
 
 body {
-	background-color: var(--bg);
+	background-color: var(--background);
 	margin: 0;
 	overflow-x: hidden;
 	overflow-y: hidden;
 }
 
-::selection {
-	background: var(--neutralbg);
+.preload * {
+	transition: none !important;
 }
 
-.linkwithoutul {
+::selection {
+	background: var(--default-selection);
+}
+
+.full {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.flex-one-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-horizontal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.flex-vertical {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.plain-list {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+.plain-link {
 	text-decoration: none;
+}
+
+.restrict-width {
+	max-width: 80vw;
 }
 
 .header {
 	position: fixed;
-	display: flex;
 	width: 100vw;
 	height: 8em;
 	top: 0px;
 	left: 0px;
 	z-index: 2;
-	align-items: center;
-	justify-content: center;
 }
 
-.header .container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.header .bg {
+.header-gradient {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(var(--bg), var(--tbg));
+	background: linear-gradient(var(--background), var(--background-gradient));
 	z-index: 3;
 }
 
-.header .container .title {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.header .title {
 	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
 	font-size: 1.8em;
 	color: var(--neutral);
@@ -58,26 +87,14 @@ body {
 	z-index: 4;
 }
 
-.header .container .blank {
+.header .blank {
 	height: 2em;
 	z-index: 4;
 }
 
-.contents {
-	position: absolute;
-	display: flex;
-	width: 100vw;
-	height: 100vh;
-	left: 0;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	word-break: keep-all;
-}
-
-.contents .description {
+.description {
 	font-family: 'Noto Sans KR', sans-serif;
-	font-size: 1.5em;
+	font-size: calc(1.2em + 0.1vw);
 	font-weight: 400;
 	color: var(--neutral);
 	text-align: center;
@@ -85,103 +102,81 @@ body {
 	margin-bottom: 1.5em;
 }
 
-.txtbtn {
-	color: var(--subtext);
+.text-button {
+	color: var(--secondary);
 	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
 	font-weight: 700;
 	text-decoration: underline;
 	font-size: 1.1em;
 }
 
-.contents .cards {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	flex-wrap: nowrap;
+.buttons {
 	height: 16em;
 	margin-bottom: 6em;
 }
 
-.contents .cards .card {
-	margin: 0.5em 0.5em 1.4em 0.5em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.button {
 	width: 5em;
 	height: 5em;
+	margin: 0.5em;
 }
 
-.contents .cards .card .cardbg {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.button .button-background {
 	width: 16em;
 	height: 4em;
 	border-radius: 0.8em;
-	background-color: var(--ctcardbg);
+	background-color: var(--button-background);
 	box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.1);
-	transition: background-color 0.3s, box-shadow 0.3s, width 0.3s, height 0.3s;
+	transition: width var(--animation-time), height var(--animation-time), background-color var(--animation-time), box-shadow var(--animation-time);
 }
 
-.contents .cards .card:hover .cardbg {
-	width: 18em;
-	height: 4.5em;
-	box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
-	background-color: #FDD200;
-	transition: background-color 0.3s, box-shadow 0.3s, width 0.3s, height 0.3s;
-}
-
-.contents .cards .card:active .cardbg {
-	box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.3);
-	transition: box-shadow 0.3s;
-}
-
-.contents .cards .card .logo {
+.button .logo {
 	width: 1.4em;
 	height: 1.4em;
-	fill: var(--ctcardlogo);
-	transition: fill 0.3s, width 0.3s, height 0.3s;
+	fill: var(--button-logo);
+	transition: width var(--animation-time), height var(--animation-time), fill var(--animation-time);
 }
 
-.contents .cards .card:hover .cardbg .logo {
-	width: 1.575em;
-	height: 1.575em;
-	fill: #0061EC;
-	transition: fill 0.3s, width 0.3s, height 0.3s;
-}
-
-.contents .cards .cardbg .txt {
+.button-name {
 	width: 9.5em;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 1.2em;
 	font-weight: 600;
-	color: var(--ctcardlogo);
+	color: var(--button-logo);
 	text-align: center;
 	margin-left: 0.4em;
-	transition: color 0.3s, font-size 0.3s, margin-left 0.3s;
+	padding-bottom: 0.24em;
+	transition: color var(--animation-time), font-size var(--animation-time), margin-left var(--animation-time), padding-bottom var(--animation-time);
 }
 
-.contents .cards .card:hover .cardbg .txt {
-	font-size: 1.35em;
-	margin-left: 0.45em;
-	color: #0061EC;
-	transition: color 0.3s, font-size 0.3s, margin-left 0.3s;
+@media (hover: hover) and (pointer: fine) {
+	.button:hover .button-background {
+		width: 18em;
+		height: 4.5em;
+		box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+		background-color: #FDD200;
+	}
+	
+	.button:active .button-background {
+		box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.3);
+	}
+	
+	.button:hover .logo {
+		width: 1.575em;
+		height: 1.575em;
+		fill: #0061EC;
+	}
+	
+	.button:hover .button-name {
+		font-size: 1.35em;
+		margin-left: 0.45em;
+		padding-bottom: 0.27em;
+		color: #0061EC;
+	}
 }
 
 @media screen and (max-width: 500px) {
-	.nolb {
-		display: inline-block;
-		width: 100vw;
-	}
-
-	.contents .description {
-		font-size: 1.2em;
+	.description {
 		font-weight: 500;
-		margin-bottom: 0.8vh;
-	}
-
-	.contents .cards {
-		margin-bottom: 6vh;
 	}
 }

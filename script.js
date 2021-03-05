@@ -94,6 +94,10 @@ media.addListener(() => {
 	showDarkModeText();
 });
 
+window.onload = function() {
+	document.body.className = "";
+}
+
 window.onscroll = function() {
 	fade();
 	hide();
