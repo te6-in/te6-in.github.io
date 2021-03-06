@@ -158,7 +158,7 @@ body {
 	max-height: 25.2em;
 	border-radius: 14px;
 	box-shadow: 0 0.2em 8px rgba(0, 0, 0, 0.3);
-	transition: box-shadow var(--animation-time);
+	transition: all var(--animation-time);
 }
 
 .float .card-name {
@@ -200,7 +200,7 @@ body {
 	border-radius: 0.8em;
 	background-color: var(--button-background);
 	box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.1);
-	transition: width var(--animation-time), height var(--animation-time), border-radius var(--animation-time), box-shadow var(--animation-time);
+	transition: all var(--animation-time);
 }
 
 #main2 .button-custom-background {
@@ -210,7 +210,7 @@ body {
 	z-index: 0;
 	border-radius: 0.8em;
 	opacity: 0;
-	transition: opacity var(--animation-time), border-radius var(--animation-time);
+	transition: all var(--animation-time);
 }
 
 #main2 .button .logo {
@@ -218,7 +218,7 @@ body {
 	height: 2em;
 	z-index: 1;
 	fill: var(--button-logo);
-	transition: width var(--animation-time), height var(--animation-time), fill var(--animation-time);
+	transition: all var(--animation-time);
 }
 
 #applemusic .button-custom-background {
@@ -243,9 +243,7 @@ body {
 	}
 
 	#main2 .button-background:hover {
-		width: 4.5em;
-		height: 4.5em;
-		border-radius: 0.9em;
+		transform: scale(var(--button-scale-amount));
 		box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
 	}
 
@@ -254,13 +252,10 @@ body {
 	}
 
 	#main2 .button-background:hover .button-custom-background {
-		border-radius: 0.9em;
 		opacity: 1;
 	}
 
 	#main2 .button-background:hover .logo {
-		width: 2.25em;
-		height: 2.25em;
 		fill: white;
 	}
 
