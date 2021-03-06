@@ -112,14 +112,14 @@ body {
 	border-radius: 0.8rem;
 	background-color: var(--button-background);
 	box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
-	transition: all var(--animation-time);
+	transition: transform var(--animation-time), box-shadow var(--animation-time), background-color var(--animation-time);
 }
 
 .button .logo {
 	width: 1.4rem;
 	height: 1.4rem;
 	fill: var(--button-logo);
-	transition: all var(--animation-time);
+	transition: fill var(--animation-time);
 }
 
 .button-name {
@@ -131,7 +131,7 @@ body {
 	text-align: center;
 	margin-left: 0.6rem;
 	padding-bottom: 0.24rem;
-	transition: all var(--animation-time);
+	transition: color var(--animation-time);
 }
 
 .text-button {

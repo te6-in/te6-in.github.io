@@ -82,7 +82,7 @@ body {
 .header {
 	position: fixed;
 	width: 100vw;
-	height: 8em;
+	height: 8rem;
 	top: 0px;
 	left: 0px;
 	z-index: 2;
@@ -100,7 +100,7 @@ body {
 
 .header .title {
 	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
-	font-size: 1.8em;
+	font-size: 1.8rem;
 	color: var(--neutral);
 	font-weight: 700;
 	position: relative;
@@ -108,32 +108,32 @@ body {
 }
 
 .header .blank {
-	height: 2em;
+	height: 2rem;
 	z-index: 4;
 }
 
-#main1 .fix-margin {
+#main-1 .fix-margin {
 	margin-bottom: 13vh;
 }
 
-#main1 .title {
+#main-1 .title {
 	font-family: 'Nunito', 'Noto Sans KR', sans-serif;
-	font-size: calc(1.6em + 1.3vw);
+	font-size: calc(1.6rem + 1.3vw);
 	font-weight: 400;
 	color: var(--neutral);
-	margin-bottom: 1.1em;
+	margin-bottom: 3rem;
 	text-align: center;
 }
 
-#main1 .title .accent {
+#main-1 .title .accent {
 	font-weight: 700;
 	font-style: italic;
 	text-decoration: underline;
 }
 
-#main1 .description {
+#main-1 .description {
 	font-family: 'Noto Sans KR', sans-serif;
-	font-size: calc(1em + 0.5vw);
+	font-size: calc(1rem + 0.5vw);
 	font-weight: 400;
 	color: var(--secondary);
 	text-align: center;
@@ -148,114 +148,114 @@ body {
 }
 
 .float .card {
-	margin: 0.5em 0.5em 3.4em 0.5em;
+	margin: 0.5rem 0.5rem 3.4rem 0.5rem;
 }
 
 .float .card-background {
 	width: 80vw;
 	height: 45vw;
-	max-width: 44.8em;
-	max-height: 25.2em;
-	border-radius: 14px;
-	box-shadow: 0 0.2em 8px rgba(0, 0, 0, 0.3);
-	transition: all var(--animation-time);
+	max-width: 44.8rem;
+	max-height: 25.2rem;
+	border-radius: 1rem;
+	box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+	transition: box-shadow var(--animation-time);
 }
 
 .float .card-name {
 	color: var(--neutral);
-	font-size: 1.4em;
+	font-size: 1.4rem;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 400;
 	text-align: center;
-	padding-top: 0.8em;
+	padding-top: 1rem;
 }
 
-#main2 .memoji {
-	width: 12em;
-	height: 12em;
-	margin-bottom: 1.5em;
-	filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.14));
+#main-2 .memoji {
+	width: 12rem;
+	height: 12rem;
+	margin-bottom: 1.5rem;
+	filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.14));
 }
 
-#main2 .fix-margin {
-	margin-bottom: 3em;
+#main-2 .fix-margin {
+	margin-bottom: 3rem;
 }
 
-#main2 .restrict-item-amount {
+#main-2 .restrict-item-amount {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	max-width: 20em;
+	max-width: 20rem;
 }
 
-#main2 .button {
-	width: 5em;
-	height: 5em;
+#main-2 .button {
+	width: 5rem;
+	height: 5rem;
 }
 
-#main2 .button-background {
-	width: 4em;
-	height: 4em;
-	margin: 0.5em;
-	border-radius: 0.8em;
+#main-2 .button-background {
+	width: 4rem;
+	height: 4rem;
+	margin: 0.5rem;
+	border-radius: 0.8rem;
 	background-color: var(--button-background);
-	box-shadow: 0 0.2em 0.3em rgba(0, 0, 0, 0.1);
-	transition: all var(--animation-time);
+	box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.1);
+	transition: transform var(--animation-time), box-shadow var(--animation-time);
 }
 
-#main2 .button-custom-background {
+#main-2 .button-custom-background {
 	position: absolute;
 	width: inherit;
 	height: inherit;
+	border-radius: 0.8rem;
 	z-index: 0;
-	border-radius: 0.8em;
 	opacity: 0;
-	transition: all var(--animation-time);
+	transition: opacity var(--animation-time);
 }
 
-#main2 .button .logo {
-	width: 2em;
-	height: 2em;
+#main-2 .button .logo {
+	width: 2rem;
+	height: 2rem;
 	z-index: 1;
 	fill: var(--button-logo);
-	transition: all var(--animation-time);
+	transition: fill var(--animation-time);
 }
 
 #applemusic .button-custom-background {
 	background-image: linear-gradient(180deg, #FB5C74 10%, #FA233B 100%);
 }
 
-#main2 #dark-mode {
+#main-2 #dark-mode {
 	color: var(--secondary);
 	font-family: 'Noto Sans KR', sans-serif;
 	font-weight: 400;
 	text-align: center;
-	font-size: 0.8em;
+	font-size: 0.9rem;
 }
 
 @media (hover: hover) and (pointer: fine) {
 	.float .card:hover .card-background {
-		box-shadow: 0 0.5em 18px rgba(0, 0, 0, 0.4);
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
 	}
 	
 	.float .card:active .card-background {
-		box-shadow: 0 0.3em 12px rgba(0, 0, 0, 0.4);
+		box-shadow: 0 0.3rem 0.75rem rgba(0, 0, 0, 0.4);
 	}
 
-	#main2 .button-background:hover {
+	#main-2 .button-background:hover {
 		transform: scale(var(--button-scale-amount));
-		box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+		box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
 	}
 
-	#main2 .button-background:active {
-		box-shadow: 0 0.2em 0.6em rgba(0, 0, 0, 0.4);
+	#main-2 .button-background:active {
+		box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.4);
 	}
 
-	#main2 .button-background:hover .button-custom-background {
+	#main-2 .button-background:hover .button-custom-background {
 		opacity: 1;
 	}
 
-	#main2 .button-background:hover .logo {
+	#main-2 .button-background:hover .logo {
 		fill: white;
 	}
 
@@ -285,58 +285,59 @@ body {
 }
 
 @media screen and (max-width: 420px) {
-	#main1 .title {
+	#main-1 .title {
 		font-weight: 600;
 	}
 
-	#main1 .title .accent {
+	#main-1 .title .accent {
 		font-weight: 800;
 	}
 
-	#main1 .description {
+	#main-1 .description {
 		font-weight: 500;
 	}
 
 	.float .card {
-		margin-bottom: 4vh;
+		margin-bottom: 2rem;
 	}
 
 	.float .card-background {
 		width: 88vw;
 		height: 49.5vw;
-		border-radius: 10px;
+		border-radius: 0.8rem;
 	}
 
 	.float .card-name {
-		font-size: 4.6vw;
+		font-size: 1.1rem;
+		padding-top: 0.5rem;
 	}
 
-	#main2 .memoji {
-		width: 10em;
-		height: 10em;
+	#main-2 .memoji {
+		width: 10rem;
+		height: 10rem;
 	}
 
-	#main2 .button-container {
-		margin-bottom: 2em;
+	#main-2 .button-container {
+		margin-bottom: 2rem;
 	}
 
-	#main2 .button {
-		width: 4.5em;
-		height: 4.5em;
+	#main-2 .button {
+		width: 4.5rem;
+		height: 4.5rem;
 	}
 
-	#main2 .button-background {
-		width: 3.5em;
-		height: 3.5em;
-		border-radius: 0.7em;
+	#main-2 .button-background {
+		width: 3.5rem;
+		height: 3.5rem;
+		border-radius: 0.7rem;
 	}
 
-	#main2 .button-custom-background {
-		border-radius: 0.7em;
+	#main-2 .button-custom-background {
+		border-radius: 0.7rem;
 	}
 
-	#main2 .button .logo {
-		width: 1.75em;
-		height: 1.75em;
+	#main-2 .button .logo {
+		width: 1.75rem;
+		height: 1.75rem;
 	}
 }
