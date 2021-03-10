@@ -43,10 +43,11 @@ function setRandomColor() {
 	var randomH = Math.floor(Math.random() * 360);
 	var randomColorHSL = "hsl(x,54%,54%)".replace('x', randomH);
 	var randomColorHSLA = "hsla(x,54%,54%, 0.2)".replace('x', randomH);
+	var randomColorHEX = hslToHex(randomH, 54, 54).toUpperCase();
 	document.getElementById("accent-color-title").style.color = randomColorHSL;
 	document.getElementById("accent-color-description").style.color = randomColorHSL;
 	document.documentElement.style.setProperty('--selection', randomColorHSLA);
-	document.querySelector('meta[name="theme-color"]').setAttribute("content", hslToHex(randomH, 54, 54));
+	document.querySelector('meta[name="theme-color"]').setAttribute("content", randomColorHEX);
 }
 
 function fade() {
