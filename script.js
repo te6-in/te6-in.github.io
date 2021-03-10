@@ -28,13 +28,25 @@ function getScrollPercent() {
 	return (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight);
 }
 
+function hslToHex(h, s, l) {
+	l /= 100;
+	const a = s * Math.min(l, 1 - l) / 100;
+	const f = n => {
+	  const k = (n + h / 30) % 12;
+	  const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+	  return Math.round(255 * color).toString(16).padStart(2, '0');   // convert to Hex and prefix "0" if needed
+	};
+	return `#${f(0)}${f(8)}${f(4)}`;
+}
+
 function setRandomColor() {
 	var randomH = Math.floor(Math.random() * 360);
-	var randomColor = "hsl(x,54%,54%)".replace('x', randomH);
+	var randomColorHSL = "hsl(x,54%,54%)".replace('x', randomH);
 	var randomColorHSLA = "hsla(x,54%,54%, 0.2)".replace('x', randomH);
-	document.getElementById("accent-color-title").style.color = randomColor;
-	document.getElementById("accent-color-description").style.color = randomColor;
+	document.getElementById("accent-color-title").style.color = randomColorHSL;
+	document.getElementById("accent-color-description").style.color = randomColorHSL;
 	document.documentElement.style.setProperty('--selection', randomColorHSLA);
+	document.querySelector('meta[name="theme-color"]').setAttribute("content", hslToHex(randomH, 54, 54));
 }
 
 function fade() {
