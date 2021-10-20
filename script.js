@@ -39,6 +39,10 @@ function hslToHex(h, s, l) {
 	return `#${f(0)}${f(8)}${f(4)}`;
 }
 
+function setThemeColor() {
+	document.querySelector('meta[name="theme-color"]').setAttribute("content", getComputedStyle(document.body).getPropertyValue("--background"));
+}
+
 function setRandomColor() {
 	var randomH = Math.floor(Math.random() * 360);
 	var randomColorHSL = "hsl(x,54%,54%)".replace('x', randomH);
@@ -47,7 +51,6 @@ function setRandomColor() {
 	document.getElementById("accent-color-title").style.color = randomColorHSL;
 	document.getElementById("accent-color-description").style.color = randomColorHSL;
 	document.documentElement.style.setProperty('--selection', randomColorHSLA);
-	document.querySelector('meta[name="theme-color"]').setAttribute("content", randomColorHEX);
 }
 
 function fade() {
@@ -110,6 +113,7 @@ function stickToBottom() {
 }
 
 setFixedViewportHeights();
+setThemeColor();
 setRandomColor();
 fade();
 hide();
@@ -134,3 +138,4 @@ window.onresize = function() {
 };
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", showDarkModeText);
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", setThemeColor);
