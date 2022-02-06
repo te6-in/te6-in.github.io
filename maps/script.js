@@ -1,11 +1,18 @@
-window.onload = function() {
+window.addEventListener("load", () => {
 	document.body.className = "";
-}
+});
 
 function setThemeColor() {
-	document.querySelector('meta[name="theme-color"]').setAttribute("content", getComputedStyle(document.body).getPropertyValue("--background"));
+	document
+		.querySelector('meta[name="theme-color"]')
+		.setAttribute(
+			"content",
+			getComputedStyle(document.body).getPropertyValue("--background")
+		);
 }
 
 setThemeColor();
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", setThemeColor);
+window
+	.matchMedia("(prefers-color-scheme: dark)")
+	.addEventListener("change", setThemeColor);
