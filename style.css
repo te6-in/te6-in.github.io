@@ -4,7 +4,7 @@ html {
 
 body {
 	background-color: var(--background);
-	font-family: 'Inter', 'Noto Sans KR', sans-serif;
+	font-family: "Inter", "Noto Sans KR", sans-serif;
 	margin: 0;
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -80,6 +80,10 @@ body {
 	max-width: 80vw;
 }
 
+.clickable {
+	cursor: pointer;
+}
+
 .header {
 	position: fixed;
 	width: 100vw;
@@ -100,7 +104,7 @@ body {
 }
 
 .header .title {
-	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+	font-family: "Montserrat", "Noto Sans KR", sans-serif;
 	font-size: 1.8rem;
 	color: var(--neutral);
 	font-weight: 700;
@@ -118,12 +122,13 @@ body {
 }
 
 #main-1 .title {
-	font-family: 'Nunito', sans-serif;
+	font-family: "Nunito", sans-serif;
 	font-size: calc(1.6rem + 1.3vw);
 	font-weight: 400;
 	color: var(--neutral);
 	margin-bottom: 3rem;
 	text-align: center;
+	line-height: calc(2.5rem + 1.3vw);
 }
 
 #main-1 .title .accent {
@@ -137,6 +142,7 @@ body {
 	font-weight: 500;
 	color: var(--secondary);
 	text-align: center;
+	line-height: calc(1.5rem + 0.8vw);
 }
 
 .float {
@@ -149,6 +155,10 @@ body {
 
 .float .card {
 	margin: 0.5rem 0.5rem 3.4rem 0.5rem;
+}
+
+.float .card:last-child {
+	margin-bottom: 0.5rem;
 }
 
 .float .card-background {
@@ -169,10 +179,34 @@ body {
 	padding-top: 1rem;
 }
 
-#main-2 .memoji {
+#main-2 .memoji-container {
 	width: 12rem;
 	height: 12rem;
 	margin-bottom: 1.5rem;
+}
+
+#main-2 .memoji-container .memoji-button {
+	position: absolute;
+	width: 2.2rem;
+	height: 2.2rem;
+	background-color: var(--floating-button-background);
+	border-radius: 100%;
+	margin-top: 7.6rem;
+	margin-left: 7.6rem;
+	z-index: 1;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	transition: box-shadow var(--animation-time);
+}
+
+#main-2 .memoji-container .icon {
+	width: 45%;
+	height: 45%;
+	fill: var(--background);
+}
+
+#main-2 .memoji-container .memoji {
+	width: inherit;
+	height: inherit;
 	filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.14));
 }
 
@@ -221,7 +255,7 @@ body {
 }
 
 #applemusic .button-custom-background {
-	background-image: linear-gradient(180deg, #FB5C74 10%, #FA233B 100%);
+	background-image: linear-gradient(180deg, #fb5c74 10%, #fa233b 100%);
 }
 
 #main-2 #dark-mode {
@@ -235,9 +269,19 @@ body {
 	.float .card:hover .card-background {
 		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
 	}
-	
+
 	.float .card:active .card-background {
 		box-shadow: 0 0.3rem 0.75rem rgba(0, 0, 0, 0.4);
+	}
+
+	#main-2 .memoji-container .memoji-button:hover {
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+		transition: box-shadow var(--animation-time);
+	}
+
+	#main-2 .memoji-container .memoji-button:active {
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+		transition: box-shadow var(--animation-time);
 	}
 
 	#main-2 .button-background:hover {
@@ -266,19 +310,19 @@ body {
 	}
 
 	#behance .button-background:hover {
-		background-color: #0056FF;
+		background-color: #0056ff;
 	}
 
 	#reddit .button-background:hover {
-		background-color: #FF4500;
+		background-color: #ff4500;
 	}
 
 	#kakaomap .button-background:hover {
-		background-color: #FDD200;
+		background-color: #fdd200;
 	}
 
 	#kakaomap .button-background:hover .logo {
-		fill: #0061EC;
+		fill: #0061ec;
 	}
 }
 
@@ -309,7 +353,7 @@ body {
 		width: 10rem;
 		height: 10rem;
 	}
-	
+
 	#main-2 .button {
 		width: 4.5rem;
 		height: 4.5rem;

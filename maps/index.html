@@ -1,59 +1,107 @@
 <!DOCTYPE html>
 <!--Better taste from *delicate* consideration-->
 <html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="" />
+		<title>te6.in 맛집 아카이브</title>
+		<link href="../variables.css" rel="stylesheet" />
+		<link
+			href="../variables-light-mode.css"
+			media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)"
+			rel="stylesheet"
+		/>
+		<link
+			href="../variables-dark-mode.css"
+			media="(prefers-color-scheme: dark)"
+			rel="stylesheet"
+		/>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="">
-	<title>te6.in 맛집 아카이브</title>
-	<link href="../variables.css" rel="stylesheet">
-	<link href="../variables-light-mode.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)" rel="stylesheet">
-	<link href="../variables-dark-mode.css" media="(prefers-color-scheme: dark)" rel="stylesheet">
-	<link href="style.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap&subset=korean" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:600,700&display=swap" rel="stylesheet">
-</head>
-
-<body class="preload">
-	<header class="header flex-vertical">
-		<div class="title flex-horizontal keep-all">
-			<a href="../" class="plain-link" style="color: var(--neutral);" aria-label="te6.in 메인 페이지 열기">
-				<span>te6.in</span>
+		<link rel="stylesheet" href="reset.css" />
+		<link href="style.css" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap&subset=korean"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:600,700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="preload">
+		<header class="header flex-vertical">
+			<div class="title flex-horizontal keep-all">
+				<a
+					href="../"
+					class="plain-link"
+					style="color: var(--neutral)"
+					aria-label="te6.in 메인 페이지 열기"
+				>
+					<span>te6.in</span>
+				</a>
+				<span
+					style="font-size: 93%; padding-bottom: 0.46rem; margin-left: 0.86rem"
+					>맛집 아카이브</span
+				>
+			</div>
+			<div class="blank"></div>
+		</header>
+		<section class="full flex-vertical">
+			<span class="description keep-all restrict-width" role="text"
+				>저의 입맛대로 고른 맛집을<br />차곡차곡 아카이브한<br />카카오맵
+				즐겨찾기 폴더입니다.</span
+			>
+			<ul class="buttons flex-horizontal plain-list restrict-width">
+				<li class="button flex-one-item">
+					<a
+						href="http://kko.to/07iz74hDT"
+						class="plain-link"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="카카오맵에서 가본 맛집 폴더 열기"
+					>
+						<div class="button-background flex-horizontal">
+							<svg
+								class="logo"
+								viewbox="0 0 14 20"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M7 0C3.1 0 0 3.1 0 7 0 11.1 4.1 16.7 6 19 6.5 19.6 7.5 19.6 8 19 9.8 16.8 14 11.2 14 7 14 3.1 10.9 0 7 0ZM7 9.5C5.6 9.5 4.5 8.4 4.5 7 4.5 5.6 5.6 4.5 7 4.5 8.4 4.5 9.5 5.6 9.5 7 9.5 8.4 8.4 9.5 7 9.5Z"
+								/>
+							</svg>
+							<span class="button-name">가본 맛집</span>
+						</div>
+					</a>
+				</li>
+				<li class="button flex-one-item">
+					<a
+						href="http://kko.to/fXH9N4OYH"
+						class="plain-link"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="카카오맵에서 가보고 싶은 맛집 폴더 열기"
+					>
+						<div class="button-background flex-horizontal">
+							<svg
+								class="logo"
+								viewbox="0 0 14 20"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M7 0C3.1 0 0 3.1 0 7 0 11.1 4.1 16.7 6 19 6.5 19.6 7.5 19.6 8 19 9.8 16.8 14 11.2 14 7 14 3.1 10.9 0 7 0ZM7 9.5C5.6 9.5 4.5 8.4 4.5 7 4.5 5.6 5.6 4.5 7 4.5 8.4 4.5 9.5 5.6 9.5 7 9.5 8.4 8.4 9.5 7 9.5Z"
+								/>
+							</svg>
+							<span class="button-name">가보고 싶은 맛집</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<a href="../" class="plain-link" aria-label="te6.in으로 돌아가기">
+				<span class="text-button keep-all">← te6.in으로 돌아가기</span>
 			</a>
-			<span style="font-size: 93%; padding-bottom: 0.46rem; margin-left: 0.86rem;">맛집 아카이브</span>
-		</div>
-		<div class="blank"></div>
-	</header>
-	<section class="full flex-vertical">
-		<span class="description keep-all restrict-width" role="text">저의 입맛대로 고른 맛집을<br>차곡차곡 아카이브한<br>카카오맵 즐겨찾기 폴더입니다.</span>
-		<ul class="buttons flex-horizontal plain-list restrict-width">
-			<li class="button flex-one-item">
-				<a href="http://kko.to/07iz74hDT" class="plain-link" target="_blank" rel="noopener noreferrer" aria-label="카카오맵에서 가본 맛집 폴더 열기">
-					<div class="button-background flex-horizontal">
-						<svg class="logo" viewbox="0 0 14 20" xmlns="http://www.w3.org/2000/svg">
-							<path d="M7 0C3.1 0 0 3.1 0 7 0 11.1 4.1 16.7 6 19 6.5 19.6 7.5 19.6 8 19 9.8 16.8 14 11.2 14 7 14 3.1 10.9 0 7 0ZM7 9.5C5.6 9.5 4.5 8.4 4.5 7 4.5 5.6 5.6 4.5 7 4.5 8.4 4.5 9.5 5.6 9.5 7 9.5 8.4 8.4 9.5 7 9.5Z"/>
-						</svg>
-						<span class="button-name">가본 맛집</span>
-					</div>
-				</a>
-			</li>
-			<li class="button flex-one-item">
-				<a href="http://kko.to/fXH9N4OYH" class="plain-link" target="_blank" rel="noopener noreferrer" aria-label="카카오맵에서 가보고 싶은 맛집 폴더 열기">
-					<div class="button-background flex-horizontal">
-						<svg class="logo" viewbox="0 0 14 20" xmlns="http://www.w3.org/2000/svg">
-							<path d="M7 0C3.1 0 0 3.1 0 7 0 11.1 4.1 16.7 6 19 6.5 19.6 7.5 19.6 8 19 9.8 16.8 14 11.2 14 7 14 3.1 10.9 0 7 0ZM7 9.5C5.6 9.5 4.5 8.4 4.5 7 4.5 5.6 5.6 4.5 7 4.5 8.4 4.5 9.5 5.6 9.5 7 9.5 8.4 8.4 9.5 7 9.5Z"/>
-						</svg>
-						<span class="button-name">가보고 싶은 맛집</span>
-					</div>
-				</a>
-			</li>
-		</ul>
-		<a href="../" class="plain-link" aria-label="te6.in으로 돌아가기">
-			<span class="text-button keep-all">← te6.in으로 돌아가기</span>
-		</a>
-	</section>
-	<script src="script.js"></script>
-</body>
-
+		</section>
+		<script src="script.js"></script>
+	</body>
 </html>
