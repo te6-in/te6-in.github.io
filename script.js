@@ -7,7 +7,6 @@ function qs(query) {
 }
 
 function isMobile() {
-	// include tablets
 	let check = false;
 	(function (a) {
 		if (
@@ -118,7 +117,6 @@ function stickToBottom() {
 const main1 = q("#main-1");
 const main2 = q("#main-2");
 const title = q("#title");
-// const showMore = q("#show-more");
 const mobile = isMobile();
 
 setThemeColor();
@@ -128,10 +126,6 @@ hide();
 showDarkModeText();
 
 title.addEventListener("click", goOpposite);
-
-// showMore.addEventListener("click", () => {
-
-// });
 
 window.addEventListener("load", () => {
 	document.body.classList.remove("preload");
