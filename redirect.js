@@ -1,1 +1,1 @@
-window.location.href = "https://blog.te6.in";
+window.location.replace("https://bento.me/12");
